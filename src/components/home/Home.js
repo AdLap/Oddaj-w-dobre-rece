@@ -13,7 +13,6 @@ import HomeWhoWeHelp from './HomeWhoWeHelp';
 const Home = () => {
     return(
         <>
-            <h1>Home</h1>
             <HomeHeader />
             <HomeMainSection />
             <HomeTreeColumns />

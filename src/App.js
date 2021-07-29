@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Route, Switch, Link } from "react-router-dom";
+import { HashRouter, BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import Home from './components/home/Home.js'
 
 
@@ -14,12 +14,12 @@ const NotFound = () => {
 
 const App = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Switch>
         <Route exact path='/' component={Home} />
         <Route component={NotFound} />
       </Switch>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
