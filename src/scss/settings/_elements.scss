@@ -17,3 +17,8 @@ body {
 li {
     list-style: none;
 }
+
+button {
+    border: .75px solid $color-main;
+    background: transparent;
+}
