@@ -1,18 +1,24 @@
 import React from 'react';
-import { Link } from 'react-scroll';
+// import { Link } from 'react-scroll';
 
 const HomeHeader = () => {
     return (
-        <header className='home-header'>
-            <button classsName='home-header-btn'>Zaloguj</button>
-            <button className='home-header-btn'>Załóż konto</button>
+        <header className='home__header'>
+            <div className='home__header__btn'>
+                <button className='home__header__btn__item'>Zaloguj</button>
+                <button className='home__header__btn__item'>Załóż konto</button>
+            </div>
 
-            <nav className='home-header-nav'>
-                <Link>Start</Link>
-                <Link>O co chodzi?</Link>
-                <Link>O nas</Link>
-                <Link>Fundacja i organizacje</Link>
-                <Link>Kontakt</Link>
+  {/* TODO! nav use <Link /> from react-scroll */}
+
+            <nav>
+                <ul className='home__header__nav'>
+                    <li className='home__header__nav__item'>Start</li>
+                    <li className='home__header__nav__item'>O co chodzi?</li>
+                    <li className='home__header__nav__item'>O nas</li>
+                    <li className='home__header__nav__item'>Fundacja i organizacje</li>
+                    <li className='home__header__nav__item'>Kontakt</li>
+                </ul>
             </nav>
         </header>
     )
