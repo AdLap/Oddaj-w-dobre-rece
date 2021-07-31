@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Hero from '../../assets/Home-Hero-Image.jpg';
 
 
@@ -14,8 +15,12 @@ const HomeMainSection = () => {
                     Oddaj niechciane rzeczy w zaufane ręce
                 </h1>
                 <div className='home__main__description__btn'>
-                    <button className='home__main__description__btn__item'>oddaj<br />rzeczy</button>
-                    <button className='home__main__description__btn__item'>zorganizuj zbiórkę</button>
+                    <Link to='/logowanie'>
+                        <button className='home__main__description__btn__item'>oddaj<br />rzeczy</button>
+                    </Link>
+                    <Link to='/logowanie'>
+                        <button className='home__main__description__btn__item'>zorganizuj zbiórkę</button>
+                    </Link>
                 </div>
             </div>
         </section>

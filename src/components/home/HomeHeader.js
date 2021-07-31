@@ -9,7 +9,7 @@ const HomeHeader = () => {
                 <button className='home__header__btn__item'>Załóż konto</button>
             </div>
 
-  {/* TODO! nav use <Link /> from react-scroll */}
+            {/* TODO! nav use <Link /> from react-scroll */}
 
             <nav>
                 <ul className='home__header__nav'>
