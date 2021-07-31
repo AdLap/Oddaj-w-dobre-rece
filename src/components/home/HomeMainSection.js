@@ -5,7 +5,7 @@ import Hero from '../../assets/Home-Hero-Image.jpg';
 
 const HomeMainSection = () => {
     return (
-        <section className='home__main'>
+        <section className='home__main' id='home'>
             <div className='home__main__img'>
                 <img className='home__main__img__item' src={Hero} alt='Oddaj rzeczy' />
             </div>
@@ -15,12 +15,8 @@ const HomeMainSection = () => {
                     Oddaj niechciane rzeczy w zaufane ręce
                 </h1>
                 <div className='home__main__description__btn'>
-                    <Link to='/logowanie'>
-                        <button className='home__main__description__btn__item'>oddaj<br />rzeczy</button>
-                    </Link>
-                    <Link to='/logowanie'>
-                        <button className='home__main__description__btn__item'>zorganizuj zbiórkę</button>
-                    </Link>
+                    <Link to='/logowanie' className='home__main__description__btn__item'>oddaj<br />rzeczy</Link>
+                    <Link to='/logowanie' className='home__main__description__btn__item'>zorganizuj zbiórkę</Link>
                 </div>
             </div>
         </section>

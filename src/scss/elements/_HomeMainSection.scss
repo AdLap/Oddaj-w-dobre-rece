@@ -48,11 +48,11 @@
             gap: 44px;
             margin-top: 123px;
             
-                &__item {
+            &__item {
+                border: .75px solid $color-main;
                 width: 310px;
                 height: 120px;
                 text-transform: uppercase;
-                color: $color-main;
                 font-size: 36px;
                 font-weight: 300;
                 line-height: 45px;

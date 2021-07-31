@@ -18,7 +18,16 @@ li {
     list-style: none;
 }
 
-button {
-    border: .75px solid $color-main;
+a {
+    border: .75px solid transparent;
     background: transparent;
+    text-decoration: none;
+    color: $color-main;
+    transition: .3s;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+        border: .75px solid $color-main;
+    }
 }

@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
-import Home from './components/home/Home.js';
-import LogIn from './components/login/LogIn.js';
+import Home from './components/home/Home';
+import LogIn from './components/login/LogIn';
+import Register from './components/login/Register';
 
 
 const NotFound = () => {
@@ -19,6 +20,7 @@ const App = () => {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/logowanie' component={LogIn} />
+        <Route path='/rejestracja' component={Register} />
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
