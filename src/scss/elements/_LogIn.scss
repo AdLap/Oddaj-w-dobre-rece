@@ -28,8 +28,7 @@
         }
     }
 
-    &__data {
-        
+    &__data { 
 
         &__form {
             background: $color-bg-login;
@@ -55,7 +54,7 @@
                 border: none;
                 border-bottom: .75px solid $color-main;
                 background: transparent;
-                font-size: 26px;
+                font-size: 20px;
                 font-weight: 400;
                 outline: none;
             }
