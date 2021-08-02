@@ -1,8 +1,11 @@
 import React from 'react';
 
 const HomeTreeColumns = () => {
+
+// number ma być pobrany z firebase
+
     return (
-        <section className='columns' id='info'>
+        <section className='columns'>
            <div className='columns__container'>
                <div className='columns__container__item'>
                    <h2 className='columns__container__item__number'>10</h2>

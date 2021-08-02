@@ -4,6 +4,9 @@
 @import 'settings/fonts';
 @import 'settings/colors';
 @import 'settings/elements';
+@import 'elements/Title';
+@import 'elements/Btn';
+@import 'elements/StepsItem';
 
 @import 'elements/App.scss';
 @import 'elements/index';
@@ -11,3 +14,4 @@
 @import 'elements/HomeMainSection';
 @import 'elements/LogIn';
 @import 'elements/HomeTreeColumns';
+@import 'elements/HomeFourSteps';

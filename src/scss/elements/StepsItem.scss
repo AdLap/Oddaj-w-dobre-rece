@@ -1,0 +1,47 @@
+.steps__item {
+    width: 148px;
+    height: 172px;
+
+    &__img {
+        width: 83px;
+        height: 83px;
+        margin: 0 auto;
+
+        &__pic {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__title {
+        margin: 8px 0 21px 0;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0;
+        color: $color-main;
+        position: relative;
+        text-align: center;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -11.5px;
+            height: 0;
+            width: 70px;
+            border: 1px solid $color-steps-title-deco; 
+        }
+    }
+
+    &__description {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0;
+        color: $color-main;
+        text-align: center;
+    }
+}
