@@ -23,7 +23,7 @@ const HomeTreeColumns = () => {
                </div>
                <div className='columns__container__item'>
                    <h2 className='columns__container__item__number'>7</h2>
-                   <h3 className='columns__container__item__title'>zorganizowanych zrbiórek</h3>
+                   <h3 className='columns__container__item__title'>zorganizowanych zbiórek</h3>
                    <span className='columns__container__item__description'>
                        Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat.
                    </span>
