@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../scss/elements/_Title.module.scss';
+import styles from './Title.module.scss';
 import CSSModules from 'react-css-modules';
 
 const Title = ({text}) => {

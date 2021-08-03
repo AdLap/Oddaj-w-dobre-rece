@@ -32,7 +32,7 @@ const HomeNavBar = () => {
             >O nas</Link>
             <Link
                 activeClass="active"
-                to='oraganization'
+                to='oraganizations'
                 spy={true}
                 smooth={true}
                 offset={0}
