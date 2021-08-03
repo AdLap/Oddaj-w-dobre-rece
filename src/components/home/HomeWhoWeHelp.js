@@ -1,6 +1,6 @@
 import React from 'react';
 import Title from '../utility/Title';
-import styles from './organizations/HomeWhoWeHelp.module.scss';
+import styles from './HomeWhoWeHelp.module.scss';
 import CSSModules from 'react-css-modules';
 
 const HomeWhoWeHelp = () => {

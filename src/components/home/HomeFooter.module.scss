@@ -1,0 +1,25 @@
+.footer {
+    width: 100vw;
+    height: 30px;
+    position: relative;
+}
+
+.fb,
+.insta {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+}
+
+.fb {
+    background: url('../../assets/Facebook.svg') no-repeat center/cover;
+    right: 192px;
+}
+
+.insta {
+    background: url('../../assets/Instagram.svg') no-repeat center/cover;
+    right: 142px;
+}

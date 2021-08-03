@@ -1,11 +1,14 @@
 import React from 'react';
+import styles from './HomeFooter.module.scss';
+import CSSModules from 'react-css-modules';
 
 const HomeFooter = () => {
     return (
-        <>
-            <h2>HomeFooter</h2>
-        </>
+        <footer styleName='footer'>
+            <a styleName='fb' href='https://facebook.com'>{null}</a>
+            <a styleName='insta' href='https://instagram.com'>{null}</a>
+        </footer>
     )
 }
 
-export default HomeFooter;
+export default CSSModules(HomeFooter, styles);

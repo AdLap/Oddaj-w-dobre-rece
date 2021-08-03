@@ -1,7 +1,7 @@
 import React from 'react';
 import image from '../../assets/People.jpg';
 import Title from '../utility/Title';
-import styles from '../../scss/elements/_HomeAboutUs.module.scss';
+import styles from './HomeAboutUs.module.scss';
 import CSSModules from 'react-css-modules';
 
 
