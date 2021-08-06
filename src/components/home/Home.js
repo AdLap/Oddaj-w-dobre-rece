@@ -1,6 +1,6 @@
 import React from 'react';
 import HomeAboutUs from './HomeAboutUs';
-import HomeContact from './HomeContact';
+import HomeContact from './contact/HomeContact';
 import HomeFooter from './HomeFooter';
 import HomeFourSteps from './HomeFourSteps';
 import HomeHeader from './HomeHeader';
@@ -8,10 +8,8 @@ import HomeMainSection from './HomeMainSection';
 import HomeTreeColumns from './HomeTreeColumns';
 import HomeWhoWeHelp from './HomeWhoWeHelp';
 
-
-
 const Home = () => {
-    return(
+    return (
         <>
             <HomeHeader />
             <HomeMainSection />

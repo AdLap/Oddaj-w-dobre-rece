@@ -4,7 +4,6 @@ import Home from './components/home/Home';
 import LogIn from './components/login/LogIn';
 import Register from './components/login/Register';
 
-
 const NotFound = () => {
   return (
     <>
@@ -26,7 +25,5 @@ const App = () => {
     </BrowserRouter>
   );
 }
-
-
 
 export default App;

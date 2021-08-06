@@ -8,7 +8,6 @@ import Choose from '../../assets/Icon-3.svg';
 import Courier from '../../assets/Icon-4.svg';
 
 const HomeFourSteps = () => {
-
     return (
         <section className='steps' id='info'>
             <Title text='Wystarczą 4 proste kroki' />

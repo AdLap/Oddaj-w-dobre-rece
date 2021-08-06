@@ -2,7 +2,7 @@ import React from 'react';
 
 const HomeTreeColumns = () => {
 
-// number ma być pobrany z firebase
+// TODO number ma być pobrany z firebase
 
     return (
         <section className='columns'>

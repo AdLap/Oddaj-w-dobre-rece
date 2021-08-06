@@ -8,5 +8,4 @@ const Title = ({text}) => {
     )
 }
 
-//export default Title;
  export default CSSModules(Title, styles);

@@ -12,7 +12,9 @@ const HomeNavBar = () => {
                 offset={0}
                 duration={300}
                 className='home__header__nav__item'
-            >Start</Link>
+            >
+                Start
+            </Link>
             <Link
                 activeClass="active"
                 to='info'
