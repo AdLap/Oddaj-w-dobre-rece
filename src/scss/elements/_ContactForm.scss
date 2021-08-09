@@ -1,6 +1,9 @@
-.form {
-    border: 1px solid red;
-    width: 528px;
-    height: 327px;
-    margin-top: 128px;
+.contact__form {
+    width: '528px',
+    height: '327px',
+    marginTop: '128px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'center'
 }
