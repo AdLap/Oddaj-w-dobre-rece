@@ -13,19 +13,16 @@ const HomeWhoWeHelp = () => {
     const [title, setTitle] = useState(titles.fund);
     const [org, setOrg] = useState(fundation);
     const [currPage, setCurrPage] = useState(1);
-    const [orgPerPage, setOrgPerPage] = useState(3);
-    const [paginate, setPaginate] = useState(3);
+    const [orgPerPage] = useState(3);
 
-    useEffect(() => {
-        setPaginate(org.length / orgPerPage);
+    // useEffect(() => {
+    //     // const unsubscribe = db.collection('organizations')
+    //     //     .onSnapshot(snap => {
+    //     //         setOrg(snap.docs.map(doc => doc.data()))
+    //     //     });
 
-        // const unsubscribe = db.collection('organizations')
-        //     .onSnapshot(snap => {
-        //         setOrg(snap.docs.map(doc => doc.data()))
-        //     });
-
-        // return () => unsubscribe();
-    }, [org]);
+    //     // return () => unsubscribe();
+    // }, []);
 
     const handleOrgList = (id) => {
         if (id === 'fund') {
@@ -36,13 +33,21 @@ const HomeWhoWeHelp = () => {
         if (id === 'org') {
             setTitle(titles.org);
             setOrg(organization);
+
         }
 
         if (id === 'loc') {
             setTitle(titles.loc);
             setOrg(local);
         }
+        setCurrPage(1);
     }
+
+    const idxLastOrg = currPage * orgPerPage;
+    const idxFirstOrg = idxLastOrg - orgPerPage;
+    const currOrg = org.slice(idxFirstOrg, idxLastOrg);
+    const pageNumb = number => setCurrPage(number)
+    
 
     return (
         <section styleName='organizations' id='oraganizations'>
@@ -55,10 +60,8 @@ const HomeWhoWeHelp = () => {
                 </div>
                 <div styleName='list'>
                     <OrganizationIntro des={title} />
-                    <OrganizationDes org={org[0].name} des={org[0].mission} things={org[0].things} />
-                    <OrganizationDes org={org[1].name} des={org[1].mission} things={org[1].things} />
-                    <OrganizationDes org={org[2].name} des={org[2].mission} things={org[2].things} />
-                    <Pagination nr={paginate} />
+                    <OrganizationDes  organization={currOrg}/>
+                    <Pagination nr={org.length / orgPerPage} paginate={pageNumb} />
                 </div>
             </div>
         </section>

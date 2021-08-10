@@ -2,16 +2,22 @@ import React from 'react';
 import styles from './OrganizationsDes.module.scss';
 import CSSModules from 'react-css-modules';
 
-const OrganizationDes = ({ org, des, things }) => {
+const OrganizationDes = ({ organization }) => {
     return (
-        <div styleName='container'>
-            <div styleName='box'>
-                <h3 styleName='name'>{org}</h3>
-                <span styleName='description'>{des}</span>
-            </div>
-            <span>{things}</span>
-        </div>
-    );
+        <>
+            {
+                organization.map(org =>
+                    <div styleName='container' key={org.id}>
+                        <div styleName='box'>
+                            <h3 styleName='name'>{org.name}</h3>
+                            <span styleName='description'>{org.des}</span>
+                        </div>
+                        <span>{org.things}</span>
+                    </div>
+                )
+            }
+        </>
+    )
 }
 
 export default CSSModules(OrganizationDes, styles);

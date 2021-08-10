@@ -25,37 +25,37 @@ export const fundation = [
     },
     {
         id: 4,
-        name: 'Fundacja “Lorem Ipsum 1”',
+        name: 'Fundacja “Lorem Ipsum 4”',
         mission: 'Quis varius quam quisque id diam vel quam elementum pulvinar.',
         things: 'Ut, aliquam, purus, sit, amet'
     },
     {
         id: 5,
-        name: 'Fundacja “Lorem Ipsum 2”',
+        name: 'Fundacja “Lorem Ipsum 5”',
         mission: 'Scelerisque in dictum non consectetur a erat nam.',
         things: 'Mi, quis, hendrerit, dolor'
     },
     {
         id: 6,
-        name: 'Fundacja “Lorem Ipsum 3”',
+        name: 'Fundacja “Lorem Ipsum 6”',
         mission: 'Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.',
         things: 'Egestas, sed, tempus'
     },
     {
         id: 7,
-        name: 'Fundacja “Lorem Ipsum 4”',
+        name: 'Fundacja “Lorem Ipsum 7”',
         mission: 'Scelerisque in dictum non consectetur a erat nam.',
         things: 'Mi, quis, hendrerit, dolor'
     },
     {
         id: 8,
-        name: 'Fundacja “Lorem Ipsum 5”',
+        name: 'Fundacja “Lorem Ipsum 8”',
         mission: 'Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.',
         things: 'Egestas, sed, tempus'
     },
     {
         id: 9,
-        name: 'Fundacja “Lorem Ipsum 6”',
+        name: 'Fundacja “Lorem Ipsum 9”',
         mission: 'Quis varius quam quisque id diam vel quam elementum pulvinar.',
         things: 'Ut, aliquam, purus, sit, amet'
     }
