@@ -1,19 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { db } from '../../../firebase';
-import styles from './HomeWhoWeHelp.module.scss';
-import CSSModules from 'react-css-modules';
 import Title from '../../utility/Title';
 import OrganizationsBtn from './OrganizationBtn';
 import OrganizationDes from './OrganizationDes';
 import OrganizationIntro from './OrganizationIntro';
 import Pagination from './Pagination';
 import { titles, fundation, organization, local } from '../../utility/organizations';
+import styles from './HomeWhoWeHelp.module.scss';
+import CSSModules from 'react-css-modules';
 
 const HomeWhoWeHelp = () => {
     const [title, setTitle] = useState(titles.fund);
     const [org, setOrg] = useState(fundation);
     const [currPage, setCurrPage] = useState(1);
     const [orgPerPage] = useState(3);
+
+    const idxLastOrg = currPage * orgPerPage;
+    const idxFirstOrg = idxLastOrg - orgPerPage;
+    const currOrg = org.slice(idxFirstOrg, idxLastOrg);
 
     // useEffect(() => {
     //     // const unsubscribe = db.collection('organizations')
@@ -43,14 +47,10 @@ const HomeWhoWeHelp = () => {
         setCurrPage(1);
     }
 
-    const idxLastOrg = currPage * orgPerPage;
-    const idxFirstOrg = idxLastOrg - orgPerPage;
-    const currOrg = org.slice(idxFirstOrg, idxLastOrg);
     const pageNumb = number => setCurrPage(number)
-    
 
     return (
-        <section styleName='organizations' id='oraganizations'>
+        <section styleName='organizations' id='organizations'>
             <div styleName='container'>
                 <Title text='Komu pomagamy?' />
                 <div styleName='btns'>
@@ -60,7 +60,7 @@ const HomeWhoWeHelp = () => {
                 </div>
                 <div styleName='list'>
                     <OrganizationIntro des={title} />
-                    <OrganizationDes  organization={currOrg}/>
+                    <OrganizationDes organization={currOrg} />
                     <Pagination nr={org.length / orgPerPage} paginate={pageNumb} />
                 </div>
             </div>

@@ -7,12 +7,18 @@ const Pagination = ({ nr, paginate }) => {
         pageNr.push(i);
     }
 
+    const clickhandler = (number) => {      
+        if (typeof paginate === "function") {
+            paginate(number);
+        }
+    }
+ 
     return (
         <div styleName={nr > 1 ? 'pagination' : 'hide'}>
             {pageNr.map((number) => <div
                 styleName='nr'
                 key={number}
-                onClick={() => paginate(number)}
+                onClick={() => clickhandler(number)}
             >
                 {number}
             </div>)}

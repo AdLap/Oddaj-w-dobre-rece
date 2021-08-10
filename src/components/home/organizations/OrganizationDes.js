@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './OrganizationsDes.module.scss';
+import styles from './OrganizationDes.module.scss';
 import CSSModules from 'react-css-modules';
 
 const OrganizationDes = ({ organization }) => {
