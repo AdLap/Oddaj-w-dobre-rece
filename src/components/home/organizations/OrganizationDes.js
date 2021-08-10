@@ -6,10 +6,10 @@ const OrganizationDes = ({ org, des, things }) => {
     return (
         <div styleName='container'>
             <div styleName='box'>
-                <h3 styleName='name'>Fundacja{org}</h3>
-                <span styleName='description'>opis{des}</span>
+                <h3 styleName='name'>{org}</h3>
+                <span styleName='description'>{des}</span>
             </div>
-            <span>rzeczy{things}</span>
+            <span>{things}</span>
         </div>
     );
 }

@@ -6,6 +6,13 @@
     margin-top: 63px;
 }
 
+.hide {
+    opacity: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 63px;
+}
+
 .nr {
     font-size: 18px;
     font-weight: 400;
@@ -24,5 +31,4 @@
     &:active {
         border: 1px solid $color-steps-title-deco;
     }
-
 }
