@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ErrorMessage, Field, Formik } from 'formik';
 import * as Yup from 'yup';
+import axios from 'axios';
 
 const ContactForm = () => {
     const styleForm = {
@@ -78,12 +79,24 @@ const ContactForm = () => {
     return (
         <Formik
             initialValues={{ name: '', email: '', msg: '' }}
-            onSubmit={values => alert(JSON.stringify(values))}
+            onSubmit={values => {
+                axios.post('https://fer-api.coderslab.pl/v1/portfolio/contact', {
+                    data: JSON.stringify(values)
+                }, {
+                    // headers: {
+                    //     'Content-Type': 'application/json'
+                    // }
+                })
+                    .then(resp => console.log(resp))
+                    .catch(error => console.error(error))
+
+                alert(JSON.stringify(values))
+            }}
             validationSchema={Yup.object({
                 name: Yup
                     .string()
-                    .matches(/^[aA-zZ]+$/, 'Imię nie powinno zawierać spacji i składać się z samych liter')
-                    .min(2)
+                    .matches(/^[aA-zZ]+$/, 'Imię nie powinno zawierać spacji i cyfr')
+                    .min(2, 'Imię musi mieć co najmniej 2 znaki')
                     .required('Podane imię jest nieprawidłowe'),
                 email: Yup
                     .string()
