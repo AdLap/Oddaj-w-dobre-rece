@@ -1,53 +1,46 @@
 import React from 'react';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { NavHashLink } from 'react-router-hash-link';
 
 const HomeNavBar = () => {
     return (
         <nav className='home__header__nav'>
-            <Link
-                activeClass="active"
-                to='home'
-                spy={true}
-                smooth={true}
+            <NavHashLink
+                smooth to='/#home'
                 offset={0}
                 duration={300}
                 className='home__header__nav__item'
+                activeStyle={{border: '.75px solid #3C3C3C'}}
             >
                 Start
-            </Link>
-            <Link
-                activeClass="active"
-                to='info'
-                spy={true}
-                smooth={true}
+            </NavHashLink>
+            <NavHashLink
+                smooth to='/#info'
                 offset={0}
                 duration={300}
                 className='home__header__nav__item'
-            >O co chodzi?</Link>
-            <Link
-                activeClass="active"
-                to='about'
-                spy={true}
-                smooth={true}
+                activeStyle={{border: '.75px solid #3C3C3C'}}
+            >O co chodzi?</NavHashLink>
+            <NavHashLink
+                smooth to='/#about'
                 offset={0}
-                duration={300} className='home__header__nav__item'
-            >O nas</Link>
-            <Link
-                activeClass="active"
-                to='organizations'
-                spy={true}
-                smooth={true}
+                duration={300}
+                className='home__header__nav__item'
+                activeStyle={{border: '.75px solid #3C3C3C'}}
+            >O nas</NavHashLink>
+            <NavHashLink
+                smooth to='/#organizations'
                 offset={0}
-                duration={300} className='home__header__nav__item'
-            >Fundacja i organizacje</Link>
-            <Link
-                activeClass="active"
-                to='contact'
-                spy={true}
-                smooth={true}
+                duration={300}
+                className='home__header__nav__item'
+                activeStyle={{border: '.75px solid #3C3C3C'}}
+            >Fundacja i organizacje</NavHashLink>
+            <NavHashLink
+                smooth to='/#contact'
                 offset={0}
-                duration={300} className='home__header__nav__item'
-            >Kontakt</Link>
+                duration={300}
+                className='home__header__nav__item'
+                activeStyle={{border: '.75px solid #3C3C3C'}}
+            >Kontakt</NavHashLink>
         </nav>
     )
 }
