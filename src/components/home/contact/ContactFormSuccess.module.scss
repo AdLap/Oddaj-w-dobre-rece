@@ -1,0 +1,10 @@
+@import '../../../scss/settings/colors';
+
+.success {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5em;
+    text-align: center;
+    color: $color-success;
+    margin: 80px auto -100px auto;
+}

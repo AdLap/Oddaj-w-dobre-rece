@@ -68,9 +68,10 @@
             
             &__item {
                 border: .75px solid transparent;
+                background: transparent;
                 padding: 13px 15px;
                 cursor: pointer;
-
+            
                 &:hover {
                     border: .75px solid $color-main;
                 }

@@ -1,11 +1,11 @@
 import React from 'react';
-import Title from '../utility/Title';
-import Btn from '../utility/Btn';
-import StepsItem from './steps/StepsItem';
-import Things from '../../assets/Icon-1.svg';
-import Packing from '../../assets/Icon-2.svg';
-import Choose from '../../assets/Icon-3.svg';
-import Courier from '../../assets/Icon-4.svg';
+import Title from '../../utility/Title';
+import Btn from '../../utility/Btn';
+import StepsItem from './StepsItem';
+import Things from '../../../assets/Icon-1.svg';
+import Packing from '../../../assets/Icon-2.svg';
+import Choose from '../../../assets/Icon-3.svg';
+import Courier from '../../../assets/Icon-4.svg';
 
 const HomeFourSteps = () => {
     return (

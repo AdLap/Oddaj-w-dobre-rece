@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { ErrorMessage, Field, Formik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
+import ContactFormSuccess from './ContactFormSuccess';
 
 const ContactForm = () => {
+    const [success, setSuccess] = useState(false);
+
     const styleForm = {
         width: '528px',
         height: '327px',
@@ -77,77 +80,85 @@ const ContactForm = () => {
     }
 
     return (
-        <Formik
-            initialValues={{ name: '', email: '', msg: '' }}
-            onSubmit={values => {
-                axios.post('https://fer-api.coderslab.pl/v1/portfolio/contact', {
-                    data: JSON.stringify(values)
-                }, {
-                    // headers: {
-                    //     'Content-Type': 'application/json'
-                    // }
-                })
-                    .then(resp => console.log(resp))
-                    .catch(error => console.error(error))
+        <>
+            {success && <ContactFormSuccess />}
+            <Formik
+                initialValues={{ name: '', email: '', msg: '' }}
+                onSubmit={values => {
+                    axios.post('https://fer-api.coderslab.pl/v1/portfolio/contact', {
+                        data: values
+                    }, {
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    })
+                        .then(resp => {
+                            if (resp === 200) {
+                                setSuccess(true);
+                                console.log(resp);
+                            }
+                        })
+                        .catch(error => alert(error))
 
-                alert(JSON.stringify(values))
-            }}
-            validationSchema={Yup.object({
-                name: Yup
-                    .string()
-                    .matches(/^[aA-zZ]+$/, 'Imię nie powinno zawierać spacji i cyfr')
-                    .min(2, 'Imię musi mieć co najmniej 2 znaki')
-                    .required('Podane imię jest nieprawidłowe'),
-                email: Yup
-                    .string()
-                    .email('Nieprawidłowy adres email')
-                    .required('Wpisz adres email'),
-                msg: Yup
-                    .string()
-                    .min(120, 'Wiadomość musi mieć co najmniej 120 znaków')
-                    .required('Wiadomość nie może być pusta')
-            })}
-        >
-            {
-                ({ handleSubmit }) => (
-                    <form onSubmit={handleSubmit} style={styleForm} className='contact__form'>
-                        <div style={styleInputBox}>
-                            <label htmlFor='name' style={styleLabel}>Wpisz swoje imię
+                    alert(JSON.stringify(values))
+                }}
+                validationSchema={Yup.object({
+                    name: Yup
+                        .string()
+                        .matches(/^[aA-zZ]+$/, 'Imię nie powinno zawierać spacji i cyfr')
+                        .min(2, 'Imię musi mieć co najmniej 2 znaki')
+                        .required('Podane imię jest nieprawidłowe'),
+                    email: Yup
+                        .string()
+                        .email('Nieprawidłowy adres email')
+                        .required('Wpisz adres email'),
+                    msg: Yup
+                        .string()
+                        .min(120, 'Wiadomość musi mieć co najmniej 120 znaków')
+                        .required('Wiadomość nie może być pusta')
+                })}
+            >
+                {
+                    ({ handleSubmit }) => (
+                        <form onSubmit={handleSubmit} style={styleForm} className='contact__form'>
+                            <div style={styleInputBox}>
+                                <label htmlFor='name' style={styleLabel}>Wpisz swoje imię
+                                    <Field
+                                        name='name'
+                                        type='text'
+                                        style={styleInput}
+                                        placeholder='Krzysztof' />
+                                    <ErrorMessage name='name' component='div' style={styleErrMsg} />
+                                </label>
+
+                                <label htmlFor='email' style={styleLabel}>Wpisz swój email
+                                    <Field
+                                        name='email'
+                                        type='email'
+                                        style={styleInput}
+                                        placeholder='abc@xyz.pl' />
+                                    <ErrorMessage name='email' component='div' style={styleErrMsg} />
+                                </label>
+                            </div>
+
+                            <label htmlFor='msg' style={styleLabel}>Wpisz swoją wiadomość
                                 <Field
-                                    name='name'
-                                    type='text'
-                                    style={styleInput}
-                                    placeholder='Krzysztof' />
-                                <ErrorMessage name='name' component='div' style={styleErrMsg} />
-                            </label>
-
-                            <label htmlFor='email' style={styleLabel}>Wpisz swój email
-                                <Field
-                                    name='email'
-                                    type='email'
-                                    style={styleInput}
-                                    placeholder='abc@xyz.pl' />
-                                <ErrorMessage name='email' component='div' style={styleErrMsg} />
-                            </label>
-                        </div>
-
-                        <label htmlFor='msg' style={styleLabel}>Wpisz swoją wiadomość
-                            <Field
-                                name='msg'
-                                as='textarea'
-                                rows='4'
-                                style={styleTextArea}
-                                placeholder='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                                    name='msg'
+                                    as='textarea'
+                                    rows='4'
+                                    style={styleTextArea}
+                                    placeholder='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
                             aliquip ex ea commodo consequat.' />
-                            <ErrorMessage name='msg' component='div' style={styleErrMsg} />
-                        </label>
+                                <ErrorMessage name='msg' component='div' style={styleErrMsg} />
+                            </label>
 
-                        <button type='submit' style={styleBtn}>Wyślij</button>
-                    </form>
-                )
-            }
-        </Formik>
+                            <button type='submit' style={styleBtn}>Wyślij</button>
+                        </form>
+                    )
+                }
+            </Formik>
+        </>
     );
 }
 

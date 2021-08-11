@@ -1,0 +1,11 @@
+@import '../../../scss/settings/colors';
+
+.btn {
+    padding: 9px 10px;
+    font-size: 13px;      
+    color: $color-header-btn;
+
+    &:hover {
+        border: .75px solid $color-header-btn-hover;
+    }
+}
