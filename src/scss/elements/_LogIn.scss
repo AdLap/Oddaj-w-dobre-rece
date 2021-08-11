@@ -11,33 +11,34 @@
         font-size: 40px;
         font-weight: 400;
         line-height: 55px;
-        letter-spacing: -.8px;
+        letter-spacing: -0.8px;
         color: $color-main;
         text-align: center;
         position: relative;
 
         &::after {
-            content: '';
+            content: "";
             height: 33px;
             width: 253px;
             position: absolute;
             bottom: -58px;
             left: 50%;
             transform: translateX(-50%);
-            background: url('../../assets/Decoration.svg');
+            background: url("../../assets/Decoration.svg");
         }
     }
 
-    &__data { 
-
+    &__data {
         &__form {
-            background: $color-bg;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 67.25px;
-            gap: 31px;
+            &__box {
+                background: $color-bg;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 40px 67.25px;
+                gap: 31px;
+            }
 
             &__label {
                 font-size: 16px;
@@ -52,11 +53,18 @@
                 width: 100%;
                 height: 40px;
                 border: none;
-                border-bottom: .75px solid $color-main;
+                border-bottom: 0.75px solid $color-main;
                 background: transparent;
                 font-size: 20px;
                 font-weight: 400;
                 outline: none;
+            }
+
+            &__error {
+                font-size: 14px;
+                font-weight: 400;
+                color: $color-error;
+                margin-top: 10px;
             }
         }
 
@@ -65,15 +73,15 @@
             justify-content: space-between;
             align-items: flex-end;
             margin-top: 40px;
-            
+
             &__item {
-                border: .75px solid transparent;
+                border: 0.75px solid transparent;
                 background: transparent;
                 padding: 13px 15px;
                 cursor: pointer;
-            
+
                 &:hover {
-                    border: .75px solid $color-main;
+                    border: 0.75px solid $color-main;
                 }
             }
         }

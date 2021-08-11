@@ -14,15 +14,17 @@ const LogIn = () => {
                 <Formik
                     initialValues={{ email: '', password: '' }}
                     onSubmit={values => {
-                        alert(JSON.stringify(values))}}
-                    validationSchema={Yup.object({
+                        alert(JSON.stringify(values))
+                    }}
+                    validateOnChange={false}
+                    validateOnBlur={false}
+                    validationSchema={Yup.object().shape({
                         email: Yup
                             .string()
                             .email('Nieprawidłowy adres email')
                             .required('Email jest wymagany'),
                         password: Yup
                             .string()
-                            // .password('Hasło jest za krótkie')
                             .min(6, 'Minimum 6 znaków')
                             .required('Musisz podać hasło')
                     })}
@@ -30,15 +32,16 @@ const LogIn = () => {
                     {
                         ({ handleSubmit }) => (
                             <form onSubmit={handleSubmit} className='login__data__form'>
-                                <label htmlFor='email' className='login__data__form__label'>Email
-                                    <Field name='email' type='email' className='login__data__form__input' />
-                                    <ErrorMessage name='email' component='div' />
-                                </label>
-                                <label htmlFor='password' className='login__data__form__label'>Hasło
-                                    <Field name='password' type='password' className='login__data__form__input' />
-                                    <ErrorMessage name='password' component='div' />
-                                </label>
-                                {/* TODO ostylować te btn */}
+                                <div className='login__data__form__box'>
+                                    <label htmlFor='email' className='login__data__form__label'>Email
+                                        <Field name='email' type='email' className='login__data__form__input' />
+                                        <ErrorMessage name='email' component='div' className='login__data__form__error' />
+                                    </label>
+                                    <label htmlFor='password' className='login__data__form__label'>Hasło
+                                        <Field name='password' type='password' className='login__data__form__input' />
+                                        <ErrorMessage name='password' component='div' className='login__data__form__error' />
+                                    </label>
+                                </div>
                                 <div div className='login__data__btn'>
                                     <Link to='/rejestracja' className='login__data__btn__item'>Załóż konto</Link>
                                     <button type='submit' className='login__data__btn__item'>Zaloguj się</button>
@@ -47,19 +50,6 @@ const LogIn = () => {
                         )
                     }
                 </Formik>
-
-
-                {/* <form className='login__data__form'>
-                    <label className='login__data__form__label'>
-                        Email<br />
-                        <input className='login__data__form__input' type='email' />
-                    </label>
-                    <label className='login__data__form__label'>
-                        Hasło<br />
-                        <input className='login__data__form__input' type='password' />
-                    </label>
-                </form> */}
-
             </div>
         </section >
     )

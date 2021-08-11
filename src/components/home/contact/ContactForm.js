@@ -102,7 +102,7 @@ const ContactForm = () => {
 
                     alert(JSON.stringify(values))
                 }}
-                validationSchema={Yup.object({
+                validationSchema={Yup.object().shape({
                     name: Yup
                         .string()
                         .matches(/^[aA-zZ]+$/, 'Imię nie powinno zawierać spacji i cyfr')
