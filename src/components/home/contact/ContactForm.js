@@ -83,25 +83,24 @@ const ContactForm = () => {
         <>
             {success && <ContactFormSuccess />}
             <Formik
-                initialValues={{ name: '', email: '', msg: '' }}
+                initialValues={{ name: '', email: '', message: '' }}
                 onSubmit={values => {
-                    axios.post('https://fer-api.coderslab.pl/v1/portfolio/contact', {
-                        data: values
-                    }, {
+                    axios.post('https://fer-api.coderslab.pl/v1/portfolio/contact',
+                        values
+                    , {
                         headers: {
                             'Content-Type': 'application/json'
                         }
                     })
                         .then(resp => {
-                            if (resp === 200) {
+                            if (resp.status === 200) {
                                 setSuccess(true);
-                                console.log(resp);
                             }
                         })
                         .catch(error => alert(error))
-
-                    alert(JSON.stringify(values))
                 }}
+                validateOnChange={false}
+                validateOnBlur={false}
                 validationSchema={Yup.object().shape({
                     name: Yup
                         .string()
@@ -112,7 +111,7 @@ const ContactForm = () => {
                         .string()
                         .email('Nieprawidłowy adres email')
                         .required('Wpisz adres email'),
-                    msg: Yup
+                    message: Yup
                         .string()
                         .min(120, 'Wiadomość musi mieć co najmniej 120 znaków')
                         .required('Wiadomość nie może być pusta')
@@ -141,9 +140,9 @@ const ContactForm = () => {
                                 </label>
                             </div>
 
-                            <label htmlFor='msg' style={styleLabel}>Wpisz swoją wiadomość
+                            <label htmlFor='message' style={styleLabel}>Wpisz swoją wiadomość
                                 <Field
-                                    name='msg'
+                                    name='message'
                                     as='textarea'
                                     rows='4'
                                     style={styleTextArea}

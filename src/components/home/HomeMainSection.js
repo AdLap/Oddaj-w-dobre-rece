@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import Hero from '../../assets/Home-Hero-Image.jpg';
 import Title from '../utility/Title';
 import Btn from '../utility/Btn';

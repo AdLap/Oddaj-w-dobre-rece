@@ -1,0 +1,12 @@
+@import '../../../scss/settings/colors';
+
+.btn {
+    border: .75px solid $color-main;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 32px;
+    color: #000000;
+    padding: 23px 63px;
+    cursor: pointer;
+}

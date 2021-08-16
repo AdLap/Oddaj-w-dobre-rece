@@ -4,6 +4,7 @@ import Home from './components/home/Home';
 import LogIn from './components/login/LogIn';
 import Register from './components/login/Register';
 import LogOut from './components/login/LogOut';
+import CollectHome from "./components/collect/CollectHome";
 
 const NotFound = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path='/logowanie' component={LogIn} />
         <Route path='/rejestracja' component={Register} />
         <Route path='/wylogowano' component={LogOut} />
+        <Route path='/oddaj-rzeczy' component={CollectHome} />
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>

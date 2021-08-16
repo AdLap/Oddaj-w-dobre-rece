@@ -1,0 +1,21 @@
+@import '../../scss/settings/colors';
+
+.box {
+    width: 100vw;
+    padding: 50px 142px;
+    background: $color-collect-accent;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 32px;
+    color: #000000;
+}
+
+.desc {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30px;
+    color: $color-main;
+}
