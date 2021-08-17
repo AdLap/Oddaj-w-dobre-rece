@@ -11,24 +11,25 @@ const CollectFormOne = ({ next, data }) => {
         'inne'
     ];
 
+    const handleSubmit = values => {
+        next(values)
+    }
+
     return (
         <>
             <h2>Zaznacz co chcesz odddać</h2>
             <Formik
                 initialValues={data}
+                onSubmit={handleSubmit}
             >
-                {({ values }) => (
+                {({values}) => (
                     <Form>
-                        <label>
-                            <Field type='radio' name='things' value={options[0]} checked={options[0]} />
-                            {options[0]}
-                        </label>
-                        {options.map((option, idx) => {
-                            <label htmlFor='things' key={idx}>
-                                <Field type='radio' name='things' id={option} value={option} checked={option} />
+                        {options.map((option, idx) => (
+                            <label key={idx}>
+                                <Field type='radio' name='things' value={option} />
                                 {option}
                             </label>
-                        })}
+                        ))}
                         <button type='submit' onClick={() => next(values)}>Dalej</button>
                     </Form>
                 )}

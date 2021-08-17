@@ -1,11 +1,15 @@
 import { Field, Form, Formik } from 'formik';
 import React from 'react';
 
-const CollectFormFour = ({ prev, data }) => {
-    console.log(data);
+const CollectFormFour = ({ prev, data, next }) => {
+    const handleSubmit = values => {
+        next(values);
+    }
+
     return (
         <Formik
             initialValues={data}
+            onSubmit={handleSubmit}
         >
             {({values}) => (
                 <Form>
