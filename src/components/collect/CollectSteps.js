@@ -9,7 +9,7 @@ const CollectSteps = () => {
             <CollectStep nr='1' desc={'Wybierz\nrzeczy'} />
             <CollectStep nr='2' desc={'Spakuj je\nw worki'} />
             <CollectStep nr='3' desc={'Wybierz\nfundację'} />
-            <CollectStep nr='4' desc={'Zamów\nkurirera'} />
+            <CollectStep nr='4' desc={'Zamów\nkuriera'} />
         </div>
     )
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import HomeHeader from '../home/header/HomeHeader';
 import Title from '../utility/Title';
 import CollectSteps from './CollectSteps';
-import CollectInfo from './CollectInfo';
 import FormHero from '../../assets/Form-Hero-Image.jpg';
 import styles from './CollectMain.module.scss';
 import CSSModules from 'react-css-modules';
@@ -24,7 +23,6 @@ const CollectMain = () => {
                     <CollectSteps />
                 </div>
             </div>
-            <CollectInfo />
         </section>
 
     );

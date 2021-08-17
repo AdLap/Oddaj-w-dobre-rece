@@ -3,24 +3,23 @@
 .collect {
    // height: 100vh;
     width: 100vw;
-//    background: url('../../assets/Form-Hero-Image.jpg') no-repeat left/contain;
+  //  background: url('../../assets/Form-Hero-Image.jpg') no-repeat  top left/54%;
 }
 
 .container {
     display: flex;
-
 }
 
 .img {
     width: 54vw;
-    height: 90vh;
+    height: 88vh;
     position: relative;
     overflow: hidden;
 }
 
 .pic {
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
     position: absolute;
     top: 0;
     right: 0;
@@ -34,6 +33,8 @@
     align-items: center;
     flex-direction: column;
     align-self: center;
+
+   // margin-top: 257px;
 }
 
 .title {
