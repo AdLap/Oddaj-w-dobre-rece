@@ -1,6 +1,7 @@
 import React from 'react';
 import { Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
+import CollectBtn from './CollectBtn';
 
 const CollectFormTree = ({ prev, next, data }) => {
     const options = [
@@ -30,9 +31,10 @@ const CollectFormTree = ({ prev, next, data }) => {
                                 <option value={option} key={option}>{option}</option>
                             ))}
                         </Field>
-
-                        <button onClick={() => prev(values)}>Wstecz</button>
-                        <button type='submit' onClick={() => next(values)}>Dalej</button>
+                        <div className='collect__form__btns'>
+                            <CollectBtn onClick={() => prev(values)} text='Wstecz' />
+                            <CollectBtn type='submit' onClick={() => next(values)} text='Dalej' />
+                        </div>
                     </Form>
                 )}
             </Formik>

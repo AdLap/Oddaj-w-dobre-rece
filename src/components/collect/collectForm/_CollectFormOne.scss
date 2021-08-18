@@ -1,0 +1,35 @@
+.collect__form__one {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 25px;
+    color: #000000;
+
+    &__label {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 32px;
+        display: flex;
+        align-items: center;
+
+        &__radio {
+            width: 0;
+            height: 0;
+            opacity: 0;
+
+            &:checked + .span {
+                background: red;
+            }
+        }
+
+        &__span {
+            margin-right: 30px;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: $border-main;
+            cursor: pointer;
+        }
+    }
+}

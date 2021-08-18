@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
 import { Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
+import CollectBtn from './CollectBtn';
 
 const CollectFormOne = ({ next, data }) => {
     const options = [
@@ -17,20 +17,23 @@ const CollectFormOne = ({ next, data }) => {
 
     return (
         <>
-            <h2>Zaznacz co chcesz odddać</h2>
+            <h2 className='collect__form__title'>Zaznacz co chcesz odddać:</h2>
             <Formik
                 initialValues={data}
                 onSubmit={handleSubmit}
             >
-                {({values}) => (
-                    <Form>
+                {({ values }) => (
+                    <Form className='collect__form__one'>
                         {options.map((option, idx) => (
-                            <label key={idx}>
-                                <Field type='radio' name='things' value={option} />
+                            <label key={idx} className='collect__form__one__label'>
+                                <span className='collect__form__one__label__span'>{null}</span>
+                                <Field type='radio' name='things' value={option} className='collect__form__one__label__radio' />
                                 {option}
                             </label>
                         ))}
-                        <button type='submit' onClick={() => next(values)}>Dalej</button>
+                        <div className='collect__form__btns'>
+                            <CollectBtn type='submit' onClick={() => next(values)} text='Dalej' />
+                        </div>
                     </Form>
                 )}
             </Formik>

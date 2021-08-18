@@ -6,8 +6,6 @@ import CollectFormTree from './CollectFormTree';
 import CollectFormFour from './CollectFormFour';
 import CollectFormSummary from './CollectFormSummary';
 import CollectFormThanks from './CollectFormThanks';
-import styles from './CollectForm.module.scss';
-import CSSModules from 'react-css-modules';
 
 const CollectForm = () => {
     const [currStep, setCurrStep] = useState(0);
@@ -71,13 +69,13 @@ const CollectForm = () => {
     console.log('data::', data);
 
     return (
-        <section>
+        <section className='collect__form'>
             {currStep < 4 && <CollectFormTitle text={title[currStep]} />}
-            <div styleName='container'>
-                {currStep < 4 && <div styleName='step'>
+            <div className='collect__form__container'>
+                {currStep < 4 && <div className='collect__form__container__page'>
                     Krok {currStep + 1}/4
                 </div>}
-                <div styleName='form'>
+                <div className='collect__form__container__step'>
                     {steps[currStep]}
                 </div>
             </div>
@@ -85,4 +83,4 @@ const CollectForm = () => {
     );
 }
 
-export default CSSModules(CollectForm, styles);
+export default CollectForm;

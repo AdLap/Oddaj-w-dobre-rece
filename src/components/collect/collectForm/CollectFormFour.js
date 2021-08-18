@@ -1,5 +1,6 @@
-import { Field, Form, Formik } from 'formik';
 import React from 'react';
+import { Field, Form, Formik } from 'formik';
+import CollectBtn from './CollectBtn';
 
 const CollectFormFour = ({ prev, data, next }) => {
     const handleSubmit = values => {
@@ -40,9 +41,10 @@ const CollectFormFour = ({ prev, data, next }) => {
                             <Field name='note' as='textarea' />
                         </label>
                     </div>
-
-                    <button onClick={() => prev(values)}>Wstecz</button>
-                    <button type='submit'>Dalej</button>
+                    <div className='collect__form__btns'>
+                            <CollectBtn onClick={() => prev(values)} text='Wstecz' />
+                            <CollectBtn type='submit' text='Dalej' />
+                        </div>
                 </Form>
             )}
         </Formik>

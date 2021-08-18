@@ -1,12 +1,12 @@
-@import '../../../scss/settings/colors';
-
 .btn {
-    border: .75px solid $color-main;
-    display: inline-block;
+    background: transparent;
+    border: 0.75px solid #3c3c3c;
+    font-family: inherit;
     font-size: 24px;
     font-weight: 300;
     line-height: 32px;
+    letter-spacing: 0;
     color: #000000;
-    padding: 23px 63px;
+    padding: 13px 52px;
     cursor: pointer;
 }

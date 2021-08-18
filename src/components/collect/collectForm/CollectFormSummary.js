@@ -1,4 +1,6 @@
 import React from 'react';
+import CollectBtn from './CollectBtn';
+
 
 const CollectFormSummary = ({ prev, next, data }) => {
 
@@ -14,9 +16,11 @@ const CollectFormSummary = ({ prev, next, data }) => {
             <p>Miasto {data.city}</p>
             <p>Kod pocztowy {data.postCode}</p>
             <p>Numer telefonu {data.phone}</p>
-            
-            <button onClick={() => prev(data)}>Wstecz</button>
-            <button type='submit' onClick={() => next(data)}>Dalej</button>
+
+            <div className='collect__form__btns'>
+                <CollectBtn onClick={() => prev(data)} text='Wstecz' />
+                <CollectBtn type='submit' onClick={() => next(data)} text='Potwierdź' />
+            </div>
         </>
     );
 }
