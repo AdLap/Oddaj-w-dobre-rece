@@ -1,7 +1,67 @@
 .collect__form__two {
-    
+    color: $color-input-txt;
+
+    &__box {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 32px;
+    }
+
+    // &__label {
+        
+    // }
+
     &__select {
         width: 300px;
         height: 49px;
+        border: $border-main;
+        position: relative;
+        cursor: pointer;
+        z-index: 3;
+        
+
+        &__arrow {
+            background: url('../../../assets/Icon-Arrow-Down.svg') no-repeat center/contain;
+            width: 57px;
+            height: 26px;
+            position: absolute;
+            right: 0;
+            top: 11.5px;
+        }
+
+        &__options,
+        &__options-active {
+            border: $border-main;
+            width: 86px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2px; 
+            position: absolute;
+            right: -.75px;
+            cursor: default;
+            transition: .3s ease-out;
+            z-index: 0;
+        }
+
+        &__options {
+            height: 49px;
+            top: 0;
+            opacity: 0;
+
+            &__item {
+                cursor: pointer;
+            }
+        }
+
+        &__options-active {         
+            height: 185px;
+            top: 64px;
+        }
     }
 }

@@ -1,8 +1,12 @@
-import { Field, Form, Formik } from 'formik';
+import React, { useState } from 'react';
+import { Field, Form, Formik, setNestedObjectValues } from 'formik';
+
 import * as Yup from 'yup';
 import CollectBtn from './CollectBtn';
 
 const CollectFormOne = ({ next, data }) => {
+    const [className, setClassName] = useState('collect__form__one__label__span');
+
     const options = [
         'ubrania, które nadają się do ponownego użycia',
         'ubrania, do wyrzucenia',
@@ -13,6 +17,11 @@ const CollectFormOne = ({ next, data }) => {
 
     const handleSubmit = values => {
         next(values)
+    }
+
+    const handleChecked = e => {
+        setClassName('collect__form__one__label__span');
+        e.target.className = 'collect__form__one__label__span-active';
     }
 
     return (
@@ -26,8 +35,16 @@ const CollectFormOne = ({ next, data }) => {
                     <Form className='collect__form__one'>
                         {options.map((option, idx) => (
                             <label key={idx} className='collect__form__one__label'>
-                                <span className='collect__form__one__label__span'>{null}</span>
-                                <Field type='radio' name='things' value={option} className='collect__form__one__label__radio' />
+                                <span id={idx} className={className}
+                                  //  onClick={e => handleChecked(e)}
+                                 // style={{ background: e.target ? 'red' : 'transparent' }} 
+                                 >{null}</span>
+                                <Field
+                                    type='radio'
+                                    name='type'
+                                    value={option}
+                                    className='collect__form__one__label__radio'
+                                />
                                 {option}
                             </label>
                         ))}

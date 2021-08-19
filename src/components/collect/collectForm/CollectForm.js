@@ -18,7 +18,7 @@ const CollectForm = () => {
     ]);
 
     const [data, setData] = useState({
-        things: '',
+        type: '',
         bags: '',
         localization: '',
         street: '',
@@ -43,7 +43,7 @@ const CollectForm = () => {
     const handleSubmit = formData => {
         alert(JSON.stringify(formData))
         setData({
-            things: '',
+            type: '',
             bags: '',
             localization: '',
             street: '',

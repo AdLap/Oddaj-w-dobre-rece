@@ -18,18 +18,23 @@
             height: 0;
             opacity: 0;
 
-            &:checked + .span {
+            &:checked + .collect__form__one__label__span {
                 background: red;
             }
         }
 
-        &__span {
+        &__span,
+        &__span-active {
             margin-right: 30px;
             display: inline-block;
             width: 40px;
             height: 40px;
             border: $border-main;
             cursor: pointer;
+
+            &-active {
+                background: $color-collect-accent;
+            }
         }
     }
 }
