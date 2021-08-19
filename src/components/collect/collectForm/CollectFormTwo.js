@@ -30,7 +30,7 @@ const CollectFormTwo = ({ prev, next, data }) => {
                             <span className='collect__form__two__label'>Liczba 60l worków:</span>
                             {/* <CollectSelect options={options} field={values.bags} name='bags' /> */}
                             <div className='collect__form__two__select'>
-                                {values.bags > 0 ? values.bags : 'wybierz'}
+                                {values.bags > 0 ? values.bags : '— wybierz —'}
                                 <div
                                     className={isActive ? 'collect__form__two__select__arrow-active' : 'collect__form__two__select__arrow'}
                                     onClick={() => handleActive(true)}

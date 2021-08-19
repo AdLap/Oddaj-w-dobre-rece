@@ -18,7 +18,9 @@
         position: relative;
         cursor: pointer;
         z-index: 5;
-
+        line-height: 44px;
+        padding-left: 18px;
+        
         &__arrow,
         &__arrow-active {
             background: url("../../../assets/Icon-Arrow-Down.svg") no-repeat center/contain;
@@ -44,6 +46,7 @@
             justify-content: center;
             align-items: center;
             gap: 2px;
+            line-height: 32px;
             position: absolute;
             top: 64px;
             right: -0.75px;
