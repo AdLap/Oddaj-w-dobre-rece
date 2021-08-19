@@ -1,0 +1,50 @@
+@import '../../../scss/settings/colors';
+
+.container {
+    width: 300px;
+    height: 49px;
+    border: $border-main;
+    position: relative;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.arrow {
+    background: url("../../../assets/Icon-Arrow-Down.svg") no-repeat center/contain;
+    width: 57px;
+    height: 26px;
+    position: absolute;
+    right: 0;
+    top: 11.5px;
+}
+
+.select,
+.select-active {
+    border: $border-main;
+    width: 86px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    position: absolute;
+    right: -0.75px;
+    cursor: default;
+    transition: 0.3s ease-out;
+    z-index: 0;
+}
+
+.select {
+    height: 49px;
+    top: 0;
+    opacity: 0;
+}
+
+.select-active {
+    height: 185px;
+    top: 64px;
+}
+
+.option {
+    cursor: pointer;
+}

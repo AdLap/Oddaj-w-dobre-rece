@@ -1,19 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import CollectBtn from './CollectBtn';
 import CollectSelect from './CollectSelect';
 
 const CollectFormTwo = ({ prev, next, data }) => {
+    const [isActive, setIsActive] = useState(false)
     const options = [1, 2, 3, 4, 5];
 
     const handleSubmit = values => {
         next(values)
     }
 
-    const handleChange = (e) => {
-        console.log(e.target.value);
+    const handleActive = () => {
+        setIsActive(!isActive);
     }
+
 
     return (
         <>
@@ -26,15 +28,24 @@ const CollectFormTwo = ({ prev, next, data }) => {
                     <Form className='collect__form__two' >
                         <div className='collect__form__two__box'>
                             <span className='collect__form__two__label'>Liczba 60l worków:</span>
+                            {/* <CollectSelect options={options} field={values.bags} name='bags' /> */}
                             <div className='collect__form__two__select'>
-                                <div className='collect__form__two__select__arrow'>{null}</div>
-                                <ul className='collect__form__two__select__options-active'>
+                                {values.bags > 0 ? values.bags : 'wybierz'}
+                                <div
+                                    className={isActive ? 'collect__form__two__select__arrow-active' : 'collect__form__two__select__arrow'}
+                                    onClick={() => handleActive(true)}
+                                >
+                                    {null}
+                                </div>
+                                <ul
+                                    className={isActive ? 'collect__form__two__select__options-active' : 'collect__form__two__select__options'}
+                                >
                                     {options.map(option => (
                                         <li
                                             className='collect__form__two__select__options__item'
                                             key={option}
                                             value={option}
-                                            onClick={e => values.bags = e.target.value}
+                                            onClick={e => { values.bags = e.target.value; handleActive(false) }}   //To raczej trzeba zmienić, nie podoba mi się
                                             name='bags'
                                         >
                                             {option}
