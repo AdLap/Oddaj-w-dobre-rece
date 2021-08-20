@@ -16,8 +16,18 @@
             width: 957px;
             height: 457px;
             margin: 70px 0 158px 0;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 32px;
             color: $color-input-txt;
         }
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        margin-bottom: 20px;
     }
 
     &__select {
@@ -63,7 +73,7 @@
             z-index: 0;
         }
 
-        &__options {    
+        &__options {
             display: none;
             transition: 0.3s ease-out; // TODO sprawdzić
 

@@ -8,46 +8,58 @@ const CollectFormFour = ({ prev, data, next }) => {
     }
 
     return (
-        <Formik
-            initialValues={data}
-            onSubmit={handleSubmit}
-        >
-            {({values}) => (
-                <Form>
-                    <div>
-                        <h3>Adres odbioru:</h3>
-                        <label> Ulica
-                            <Field name='street' />
-                        </label>
-                        <label>Miasto
-                            <Field name='city' />
-                        </label>
-                        <label>Kod pocztowy
-                            <Field name='postCode' />
-                        </label>
-                        <label>Numer telefonu
-                            <Field name='phone' />
-                        </label>
-                    </div>
-                    <div>
-                        <h3>Termin odbioru:</h3>
-                        <label>data
-                            <Field name='date' />
-                        </label>
-                        <label>Godzina
-                            <Field name='time' />
-                        </label>
-                        <label>Uwagi dla kuriera
-                            <Field name='note' as='textarea' />
-                        </label>
-                    </div>
-                    <div className='collect__form__btns'>
+        <>
+            <h2 className='collect__form__title'>Podaj adres oraz termin odbioru rzecz przez kuriera</h2>
+
+            <Formik
+                initialValues={data}
+                onSubmit={handleSubmit}
+            >
+                {({ values }) => (
+                    <Form className='collect__form__four'>
+                        <div className='collect__form__four__container'>
+                            <h3 className='collect__form__subtitle'>Adres odbioru:</h3>
+                            <label className='collect__form__four__label' htmlFor='street'>
+                                <div>Ulica</div>
+                                <Field name='street' className='collect__form__four__input' />
+                            </label>
+                            <label className='collect__form__four__label' htmlFor='city'>
+                                <div>Miasto</div>
+                                <Field name='city' className='collect__form__four__input' />
+                            </label>
+                            <label className='collect__form__four__label' htmlFor='postCode'>
+                                <div>Kod<br/>pocztowy</div>
+                                <Field name='postCode' className='collect__form__four__input' />
+                            </label>
+                            <label className='collect__form__four__label' htmlFor='phone'>
+                                <div>Numer<br/>telefonu</div>
+                                <Field name='phone' className='collect__form__four__input' />
+                            </label>
+
+                        </div>
+                        <div className='collect__form__four__container'>
+                            <h3 className='collect__form__subtitle'>Termin odbioru:</h3>
+                            <label className='collect__form__four__label' htmlFor='date'>
+                                <div>Data</div>
+                                <Field name='date' className='collect__form__four__input' />
+                            </label>
+                            <label className='collect__form__four__label' htmlFor='time'>
+                                <div>Godzina</div>
+                                <Field name='time' className='collect__form__four__input' />
+                            </label>
+                            <label className='collect__form__four__label' htmlFor='note'>
+                                <div>Uwagi dla<br/>kuriera</div>
+                                <Field name='note' as='textarea' rows='4' className='collect__form__four__input textarea'/>
+                            </label>
+                        </div>
+                        <div className='collect__form__btns'>
                             <CollectBtn onClick={() => prev(values)} text='Wstecz' />
                             <CollectBtn type='submit' text='Dalej' />
                         </div>
-                </Form>
-            )}
-        </Formik>
+                    </Form>
+                )}
+            </Formik>
+        </>
     );
 }
 

@@ -77,7 +77,7 @@ const CollectFormTree = ({ prev, next, data }) => {
                                 </ul>
                             </div>
                             <div className='collect__form__groups'>
-                                <h3 className='collect__form__tree__title'>Komu chcesz pomóc?</h3>
+                                <h3 className='collect__form__subtitle'>Komu chcesz pomóc?</h3>
                                 <div className='collect__form__groups__checkbox'>
                                     {optionsGroups.map(option => (
                                         <span
@@ -96,7 +96,7 @@ const CollectFormTree = ({ prev, next, data }) => {
                                 </div>
                             </div>
                             <div className='collect__form__local'>
-                                <h3 className='collect__form__tree__title'>
+                                <h3 className='collect__form__subtitle'>
                                     Wpisz nazwę konkretnej organizacji (opcjonalnie)
                                 </h3>
                                 <Field name='localizationSpecific'
