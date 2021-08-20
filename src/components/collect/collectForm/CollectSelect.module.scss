@@ -1,4 +1,4 @@
-@import '../../../scss/settings/colors';
+@import "../../../scss/settings/colors";
 
 .container {
     width: 300px;
@@ -6,28 +6,39 @@
     border: $border-main;
     position: relative;
     cursor: pointer;
-    z-index: 3;
+    z-index: 5;
+    line-height: 44px;
+    padding-left: 18px;
 }
 
-.arrow {
+.arrow,
+.arrow-active {
     background: url("../../../assets/Icon-Arrow-Down.svg") no-repeat center/contain;
     width: 57px;
     height: 26px;
     position: absolute;
     right: 0;
     top: 11.5px;
+    transition: 0.3s ease-out;
+}
+
+.arrow-active {
+    transform: rotateX(180deg);
 }
 
 .select,
 .select-active {
     border: $border-main;
     width: 86px;
+    height: 185px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2px;
+    line-height: 32px;
     position: absolute;
+    top: 64px;
     right: -0.75px;
     cursor: default;
     transition: 0.3s ease-out;
@@ -35,14 +46,11 @@
 }
 
 .select {
-    height: 49px;
-    top: 0;
     opacity: 0;
 }
 
 .select-active {
-    height: 185px;
-    top: 64px;
+    opacity: 1;
 }
 
 .option {

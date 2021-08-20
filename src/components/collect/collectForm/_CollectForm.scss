@@ -16,6 +16,60 @@
             width: 957px;
             height: 457px;
             margin: 70px 0 158px 0;
+            color: $color-input-txt;
+        }
+    }
+
+    &__select {
+        width: 300px;
+        height: 49px;
+        border: $border-main;
+        position: relative;
+        cursor: pointer;
+        z-index: 5;
+        line-height: 44px;
+        padding-left: 18px;
+
+        &__arrow,
+        &__arrow-active {
+            background: url("../../../assets/Icon-Arrow-Down.svg") no-repeat center/contain;
+            width: 57px;
+            height: 26px;
+            position: absolute;
+            right: 0;
+            top: 11.5px;
+            transition: 0.3s ease-out;
+
+            &-active {
+                transform: rotateX(180deg);
+            }
+        }
+
+        &__options-active {
+            border: $border-main;
+            width: 86px;
+            height: 185px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2px;
+            line-height: 32px;
+            position: absolute;
+            top: 64px;
+            right: -0.75px;
+            cursor: default;
+            transition: 0.3s ease-out; // TODO sprawdzić
+            z-index: 0;
+        }
+
+        &__options {    
+            display: none;
+            transition: 0.3s ease-out; // TODO sprawdzić
+
+            &__item {
+                cursor: pointer;
+            }
         }
     }
 

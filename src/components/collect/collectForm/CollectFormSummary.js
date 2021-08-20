@@ -8,8 +8,8 @@ const CollectFormSummary = ({ prev, next, data }) => {
         <>
             <h2>Podsumowanie Twojej darowizny</h2>
             <h3>Oddajesz:</h3>
-            <p>{data.bags} worki, {data.type}</p>
-            <p>dla lokalizacji: {data.localization}</p>
+            <p>{data.bags} worki, {data.type}, {data.helpGroups.join(', ')}</p>
+            <p>dla lokalizacji: {data.localization}, {data.localizationSpecific}</p>
 
             <h3>Adres odbioru:</h3>
             <p>Ulica {data.street}</p>

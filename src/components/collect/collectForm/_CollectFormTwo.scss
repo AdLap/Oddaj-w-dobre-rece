@@ -1,70 +1,12 @@
 .collect__form__two {
-    color: $color-input-txt;
-
-    &__box {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 20px;
-        font-size: 24px;
-        font-weight: 300;
-        line-height: 32px;
-    }
-
-    &__select {
-        width: 300px;
-        height: 49px;
-        border: $border-main;
-        position: relative;
-        cursor: pointer;
-        z-index: 5;
-        line-height: 44px;
-        padding-left: 18px;
-        
-        &__arrow,
-        &__arrow-active {
-            background: url("../../../assets/Icon-Arrow-Down.svg") no-repeat center/contain;
-            width: 57px;
-            height: 26px;
-            position: absolute;
-            right: 0;
-            top: 11.5px;
-            transition: 0.3s ease-out;
-
-            &-active {
-                transform: rotateX(180deg);
-            }
-        }
-
-        &__options,
-        &__options-active {
-            border: $border-main;
-            width: 86px;
-            height: 185px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 2px;
-            line-height: 32px;
-            position: absolute;
-            top: 64px;
-            right: -0.75px;
-            cursor: default;
-            transition: 0.3s ease-out;
-            z-index: 0;
-        }
-
-        &__options {
-            opacity: 0;
-
-            &__item {
-                cursor: pointer;
-            }
-        }
-
-        &__options-active {
-            opacity: 1;
-        }
-    }
+  
+  &__box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 32px;
+  }
 }

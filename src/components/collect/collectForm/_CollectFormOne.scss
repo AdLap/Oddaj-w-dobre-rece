@@ -19,7 +19,7 @@
             opacity: 0;
 
             &:checked + .collect__form__one__label__span {
-                background: red;
+                background: $color-collect-accent;
             }
         }
 
