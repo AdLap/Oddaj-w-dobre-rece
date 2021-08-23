@@ -25,7 +25,6 @@ const Register = () => {
                             .required('Email jest wymagany'),
                         password: Yup
                             .string()
-                            // .password('Hasło jest za krótkie')
                             .min(6, 'Minimum 6 znaków')
                             .required('Musisz podać hasło'),
                         password2: Yup

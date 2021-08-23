@@ -1,5 +1,6 @@
 import React from 'react';
-import { Field, Form, Formik } from 'formik';
+import { ErrorMessage, Field, Form, Formik } from 'formik';
+import * as Yup from 'yup';
 import CollectBtn from './CollectBtn';
 
 const CollectFormFour = ({ prev, data, next }) => {
@@ -7,12 +8,17 @@ const CollectFormFour = ({ prev, data, next }) => {
         next(values);
     }
 
+    const validationSchema = Yup.object().shape({
+        street: Yup.string().min(2, 'za krótko').required()
+    })
+
     return (
         <>
             <h2 className='collect__form__title'>Podaj adres oraz termin odbioru rzecz przez kuriera</h2>
 
             <Formik
                 initialValues={data}
+                validationSchema={validationSchema}
                 onSubmit={handleSubmit}
             >
                 {({ values }) => (
@@ -22,6 +28,7 @@ const CollectFormFour = ({ prev, data, next }) => {
                             <label className='collect__form__four__label' htmlFor='street'>
                                 <div>Ulica</div>
                                 <Field name='street' className='collect__form__four__input' />
+                                <ErrorMessage name='street' component='div' />
                             </label>
                             <label className='collect__form__four__label' htmlFor='city'>
                                 <div>Miasto</div>

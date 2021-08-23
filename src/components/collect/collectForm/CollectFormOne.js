@@ -47,7 +47,7 @@ const CollectFormOne = ({ next, data }) => {
                             </label>
                         ))}
                         <div className='collect__form__btns'>
-                            <CollectBtn type='submit' onClick={() => next(values)} text='Dalej' />
+                            <CollectBtn type='submit' text='Dalej' />
                         </div>
                     </Form>
                 )}

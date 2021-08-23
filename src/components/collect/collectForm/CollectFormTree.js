@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Field, Form, Formik } from 'formik';
+import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import CollectBtn from './CollectBtn';
 
@@ -42,15 +42,37 @@ const CollectFormTree = ({ prev, next, data }) => {
         setIsChecked(!isChecked)
     }
 
+    const validationSchema = Yup.object().shape({
+        localization: Yup
+            .string()
+            .required('Podaj lokalizację'),
+        helpGroups: Yup
+            .array()
+            .min(1, 'Zaznacz co najmniej jedną grupę'),
+        // localizationSpecific: Yup
+        //     .string()
+        //     .min(3, 'Nazwa musi mieć co najmniej trzy znaki')
+        //     .required('Zaznacz komu chcesz pomóc, lub wpisz nazwę organizacji'),
+
+        // localizationSpecific: Yup
+        //     .mixed().when('helpGroups', {
+        //         is: false,
+        //         then: Yup.string().min(3, 'za krótko').required('Zaznacz komu chcesz pomóc, lub wpisz nazwę organizacji')
+        //     })
+    })
+
     return (
         <>
             <h2 className='collect__form__title'>Lokalizacja:</h2>
             <Formik
                 initialValues={data}
+                validateOnChange={false}
+                validateOnBlur={false}
+                validationSchema={validationSchema}
                 onSubmit={handleSubmit}
             >
                 {({ values }) => (
-                    <Form className='collect__form__tree' >
+                    <Form className='collect__form__tree'>
                         <div className='collect__form__tree__box'>
                             <div className='collect__form__select'>
                                 {values.localization ? values.localization : '— wybierz —'}
@@ -69,12 +91,13 @@ const CollectFormTree = ({ prev, next, data }) => {
                                             key={option}
                                             value={option}
                                             name='localization'
-                                            onClick={() => { values.localization = option; handleActive(false); }}   //To raczej trzeba zmienić, nie podoba mi się
+                                            onClick={() => { values.localization = option; handleActive(false); }}
                                         >
                                             {option}
                                         </li>
                                     ))}
                                 </ul>
+                                <ErrorMessage name='localization' component='div' />
                             </div>
                             <div className='collect__form__groups'>
                                 <h3 className='collect__form__subtitle'>Komu chcesz pomóc?</h3>
@@ -94,6 +117,7 @@ const CollectFormTree = ({ prev, next, data }) => {
                                         </span>
                                     ))}
                                 </div>
+                                <ErrorMessage name='helpGroups' component='div' />
                             </div>
                             <div className='collect__form__local'>
                                 <h3 className='collect__form__subtitle'>
@@ -102,11 +126,12 @@ const CollectFormTree = ({ prev, next, data }) => {
                                 <Field name='localizationSpecific'
                                     className='collect__form__local__input'
                                 />
+                                <ErrorMessage name='localizationSpecific' component='div' />
                             </div>
                         </div>
                         <div className='collect__form__btns'>
                             <CollectBtn onClick={() => prev(values)} text='Wstecz' />
-                            <CollectBtn type='submit' onClick={() => next(values)} text='Dalej' />
+                            <CollectBtn type='submit' text='Dalej' />
                         </div>
                     </Form>
                 )}

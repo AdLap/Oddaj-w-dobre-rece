@@ -55,7 +55,7 @@ const CollectFormTwo = ({ prev, next, data }) => {
                         </div>
                         <div className='collect__form__btns'>
                             <CollectBtn onClick={() => prev(values)} text='Wstecz' />
-                            <CollectBtn type='submit' onClick={() => next(values)} text='Dalej' />
+                            <CollectBtn type='submit' text='Dalej' />
                         </div>
                     </Form>
                 )}

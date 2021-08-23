@@ -149,7 +149,7 @@ const ContactForm = () => {
                                     placeholder='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
                             aliquip ex ea commodo consequat.' />
-                                <ErrorMessage name='msg' component='div' style={styleErrMsg} />
+                                <ErrorMessage name='message' component='div' style={styleErrMsg} />
                             </label>
 
                             <button type='submit' style={styleBtn}>Wyślij</button>
