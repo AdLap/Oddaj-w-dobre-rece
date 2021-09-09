@@ -1,0 +1,26 @@
+.collect__form__summary {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr;
+
+    &__items,
+    &__adress,
+    &__date {
+        margin-top: 45px;
+    }
+
+    &__items {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+    &__adress {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    &__date {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+}

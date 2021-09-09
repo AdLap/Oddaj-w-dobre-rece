@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Field, Form, Formik } from 'formik';
+import { ErrorMessage, Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import CollectBtn from './CollectBtn';
 // import CollectSelect from './CollectSelect';
@@ -16,23 +16,34 @@ const CollectFormTwo = ({ prev, next, data }) => {
         setIsActive(!isActive);
     }
 
+    const validationSchema = Yup.object().shape({
+        bags: Yup
+            .number()
+            .required('Wybierz ilość worków')
+    })
+
     return (
         <>
             <h2 className='collect__form__title'>Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:</h2>
             <Formik
                 initialValues={data}
                 onSubmit={handleSubmit}
+                validationSchema={validationSchema}
+                validateOnChange={true}
+                validateOnBlur={true}
             >
                 {({ values }) => (
                     <Form className='collect__form__two' >
                         <div className='collect__form__two__box'>
                             <span className='collect__form__two__label'>Liczba 60l worków:</span>
                             {/* <CollectSelect options={options} field={values.bags} name='bags' /> */}
-                            <div className='collect__form__select'>
+                            <div
+                                className='collect__form__select'
+                                onClick={() => handleActive(true)}
+                            >
                                 {values.bags ? values.bags : '— wybierz —'}
                                 <div
                                     className={isActive ? 'collect__form__select__arrow-active' : 'collect__form__select__arrow'}
-                                    onClick={() => handleActive(true)}
                                 >
                                     {null}
                                 </div>
@@ -44,13 +55,14 @@ const CollectFormTwo = ({ prev, next, data }) => {
                                             className='collect__form__select__options__item'
                                             key={option}
                                             value={option}
-                                            onClick={() => { values.bags = option; handleActive(false) }}   //To raczej trzeba zmienić, nie podoba mi się
+                                            onClick={() => { values.bags = option; handleActive(false) }}
                                             name='bags'
                                         >
                                             {option}
                                         </li>
                                     ))}
                                 </ul>
+                                <ErrorMessage name='bags' component='div' className='collect__error__msg' />
                             </div>
                         </div>
                         <div className='collect__form__btns'>

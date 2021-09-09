@@ -9,7 +9,7 @@ const CollectFormFour = ({ prev, data, next }) => {
     }
 
     const validationSchema = Yup.object().shape({
-        street: Yup.string().min(2, 'za krótko').required()
+        street: Yup.string().min(2, 'za krótko').required('Podaj nazwę ulicy')
     })
 
     return (
@@ -28,18 +28,18 @@ const CollectFormFour = ({ prev, data, next }) => {
                             <label className='collect__form__four__label' htmlFor='street'>
                                 <div>Ulica</div>
                                 <Field name='street' className='collect__form__four__input' />
-                                <ErrorMessage name='street' component='div' />
                             </label>
+                            <ErrorMessage name='street' component='div' className='collect__error__msg' />
                             <label className='collect__form__four__label' htmlFor='city'>
                                 <div>Miasto</div>
                                 <Field name='city' className='collect__form__four__input' />
                             </label>
                             <label className='collect__form__four__label' htmlFor='postCode'>
-                                <div>Kod<br/>pocztowy</div>
+                                <div>Kod<br />pocztowy</div>
                                 <Field name='postCode' className='collect__form__four__input' />
                             </label>
                             <label className='collect__form__four__label' htmlFor='phone'>
-                                <div>Numer<br/>telefonu</div>
+                                <div>Numer<br />telefonu</div>
                                 <Field name='phone' className='collect__form__four__input' />
                             </label>
 
@@ -55,8 +55,8 @@ const CollectFormFour = ({ prev, data, next }) => {
                                 <Field name='time' className='collect__form__four__input' />
                             </label>
                             <label className='collect__form__four__label' htmlFor='note'>
-                                <div>Uwagi dla<br/>kuriera</div>
-                                <Field name='note' as='textarea' rows='4' className='collect__form__four__input textarea'/>
+                                <div>Uwagi dla<br />kuriera</div>
+                                <Field name='note' as='textarea' rows='4' className='collect__form__four__input textarea' />
                             </label>
                         </div>
                         <div className='collect__form__btns'>

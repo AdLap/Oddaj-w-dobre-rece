@@ -66,19 +66,20 @@ const CollectFormTree = ({ prev, next, data }) => {
             <h2 className='collect__form__title'>Lokalizacja:</h2>
             <Formik
                 initialValues={data}
-                validateOnChange={false}
-                validateOnBlur={false}
+                validateOnChange={true}
+                validateOnBlur={true}
                 validationSchema={validationSchema}
                 onSubmit={handleSubmit}
             >
                 {({ values }) => (
                     <Form className='collect__form__tree'>
                         <div className='collect__form__tree__box'>
-                            <div className='collect__form__select'>
+                            <div className='collect__form__select'
+                                onClick={() => handleActive(true)}
+                            >
                                 {values.localization ? values.localization : '— wybierz —'}
                                 <div
                                     className={isActive ? 'collect__form__select__arrow-active' : 'collect__form__select__arrow'}
-                                    onClick={() => handleActive(true)}
                                 >
                                     {null}
                                 </div>
@@ -97,7 +98,7 @@ const CollectFormTree = ({ prev, next, data }) => {
                                         </li>
                                     ))}
                                 </ul>
-                                <ErrorMessage name='localization' component='div' />
+                                <ErrorMessage name='localization' component='div' className='collect__error__msg' />
                             </div>
                             <div className='collect__form__groups'>
                                 <h3 className='collect__form__subtitle'>Komu chcesz pomóc?</h3>
@@ -117,7 +118,7 @@ const CollectFormTree = ({ prev, next, data }) => {
                                         </span>
                                     ))}
                                 </div>
-                                <ErrorMessage name='helpGroups' component='div' />
+                                <ErrorMessage name='helpGroups' component='div' className='collect__error__msg' />
                             </div>
                             <div className='collect__form__local'>
                                 <h3 className='collect__form__subtitle'>
@@ -126,7 +127,7 @@ const CollectFormTree = ({ prev, next, data }) => {
                                 <Field name='localizationSpecific'
                                     className='collect__form__local__input'
                                 />
-                                <ErrorMessage name='localizationSpecific' component='div' />
+                                <ErrorMessage name='localizationSpecific' component='div' className='collect__error__msg' />
                             </div>
                         </div>
                         <div className='collect__form__btns'>
