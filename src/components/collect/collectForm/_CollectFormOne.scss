@@ -18,7 +18,7 @@
             height: 0;
             opacity: 0;
 
-            &:checked + .collect__form__one__label__span {
+            &:checked + span {
                 background: $color-collect-accent;
             }
         }
@@ -31,6 +31,10 @@
             height: 40px;
             border: $border-main;
             cursor: pointer;
+        }
+
+        &__span-active {
+            background: $color-collect-accent;
         }
     }
 }
