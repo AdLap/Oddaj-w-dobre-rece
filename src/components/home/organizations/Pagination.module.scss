@@ -1,4 +1,4 @@
-@import '../../../scss/settings/colors';
+@import "../../../scss/settings/colors";
 
 .pagination {
     display: flex;
@@ -13,7 +13,8 @@
     margin-top: 63px;
 }
 
-.nr {
+.nr,
+.nr-active {
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
@@ -22,13 +23,13 @@
     padding: 13px 15px;
     cursor: pointer;
     border: 1px solid transparent;
-    transition: .3s;
+    transition: 0.3s;
 
     &:hover {
         border: 1px solid $color-steps-title-deco;
     }
+}
 
-    &:active {
-        border: 1px solid $color-steps-title-deco;
-    }
+.nr-active {
+    border: 1px solid $color-steps-title-deco;
 }

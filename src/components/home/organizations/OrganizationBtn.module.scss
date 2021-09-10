@@ -1,6 +1,7 @@
-@import '../../../scss/settings/colors';
+@import "../../../scss/settings/colors";
 
-.btn {
+.btn,
+.btn-active {
     background: transparent;
     outline: none;
     border: none;
@@ -11,9 +12,9 @@
     color: $color-main;
     text-align: center;
     cursor: pointer;
-    border: .75px solid transparent;
+    border: 0.75px solid transparent;
+}
 
-    &:active {
-        border: .75px solid $color-main;
-    }
+.btn-active {
+    border: 0.75px solid $color-main;
 }

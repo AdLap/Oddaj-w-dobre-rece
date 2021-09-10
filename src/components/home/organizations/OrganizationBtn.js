@@ -2,9 +2,9 @@ import React from 'react';
 import styles from './OrganizationBtn.module.scss';
 import CSSModules from 'react-css-modules';
 
-const OrganizationBtn = ({ text, id, handleBtnId }) => {
+const OrganizationBtn = ({ text, id, handleBtnId, style }) => {
     return (
-        <button styleName='btn' id={id} onClick={() => handleBtnId(id)}>{text}</button>
+        <button styleName={style} id={id} onClick={() => handleBtnId(id)}>{text}</button>
     )
 }
 

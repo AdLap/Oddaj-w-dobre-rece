@@ -54,9 +54,9 @@ const HomeWhoWeHelp = () => {
             <div styleName='container'>
                 <Title text='Komu pomagamy?' />
                 <div styleName='btns'>
-                    <OrganizationsBtn text='Fundacjom' id='fund' handleBtnId={handleOrgList} />
-                    <OrganizationsBtn text={'Organizacjom\npozarządowym'} id='org' handleBtnId={handleOrgList} />
-                    <OrganizationsBtn text={'Lokalnym\nzbiórkom'} id='loc' handleBtnId={handleOrgList} />
+                    <OrganizationsBtn text='Fundacjom' id='fund' handleBtnId={handleOrgList} style={org === fundation ? 'btn-active' : 'btn'} />
+                    <OrganizationsBtn text={'Organizacjom\npozarządowym'} id='org' handleBtnId={handleOrgList} style={org === organization ? 'btn-active' : 'btn'} />
+                    <OrganizationsBtn text={'Lokalnym\nzbiórkom'} id='loc' handleBtnId={handleOrgList} style={org === local ? 'btn-active' : 'btn'} />
                 </div>
                 <div styleName='list'>
                     <OrganizationIntro des={title} />
