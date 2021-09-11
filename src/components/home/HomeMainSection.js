@@ -15,7 +15,7 @@ const HomeMainSection = () => {
                 <Title text={textTitle} />
                 <div className='home__main__description__btn'>
                     <Btn path='/logowanie' text={'oddaj\nrzeczy'} />
-                    <Btn path='/logowanie' text={'zorganizuj\nzbiórkę'} />
+                    <Btn path='/oddaj-rzeczy' text={'zorganizuj\nzbiórkę'} />
                 </div>
             </div>
         </section>

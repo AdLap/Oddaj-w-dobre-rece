@@ -62,7 +62,7 @@ const CollectFormTwo = ({ prev, next, data }) => {
                                         </li>
                                     ))}
                                 </ul>
-                                <ErrorMessage name='bags' component='div' className='collect__error__msg' />
+                                <ErrorMessage name='bags' component='div' className='error' />
                             </div>
                         </div>
                         <div className='collect__form__btns'>

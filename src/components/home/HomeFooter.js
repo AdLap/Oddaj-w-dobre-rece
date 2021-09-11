@@ -5,8 +5,8 @@ import CSSModules from 'react-css-modules';
 const HomeFooter = () => {
     return (
         <footer styleName='footer'>
-            <a styleName='fb' href='https://facebook.com'>{null}</a>
-            <a styleName='insta' href='https://instagram.com'>{null}</a>
+            <a styleName='fb' href='https://facebook.com' target='_blank'>{null}</a>
+            <a styleName='insta' href='https://instagram.com' target='_blank'>{null}</a>
         </footer>
     )
 }

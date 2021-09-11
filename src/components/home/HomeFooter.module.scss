@@ -2,6 +2,7 @@
     width: 100vw;
     height: 30px;
     position: relative;
+    padding-bottom: 45px;
 }
 
 .fb,
@@ -12,6 +13,14 @@
     position: absolute;
     top: 0;
     cursor: pointer;
+    border: none;
+    overflow: visible;
+
+    &:hover {
+        border: none;
+        transform: scale(1.1);
+    }
+
 }
 
 .fb {

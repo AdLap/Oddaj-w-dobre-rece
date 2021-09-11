@@ -1,4 +1,4 @@
-.collect__form__tree {
+.collect__form__three {
     margin-top: -20px;
     font-size: 24px;
     font-weight: 300;
@@ -10,9 +10,13 @@
         font-size: 24px;
         line-height: 32px;
     }
+
+    &__error {
+        position: absolute;
+    }
 }
 
-.tree__select {
+.three__select {
     left: -2px;
     width: 100%;
     background: $color-select-bg;

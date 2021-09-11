@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import CollectFormTitle from './CollectFormTitle';
 import CollectFormOne from './CollectFormOne';
 import CollectFormTwo from './CollectFormTwo';
-import CollectFormTree from './CollectFormTree';
+import CollectFormThree from './CollectFormThree';
 import CollectFormFour from './CollectFormFour';
 import CollectFormSummary from './CollectFormSummary';
 import CollectFormThanks from './CollectFormThanks';
@@ -64,7 +64,7 @@ const CollectForm = () => {
     const steps = [
         <CollectFormOne next={handleNextStep} data={data} />,
         <CollectFormTwo prev={handlePrevStep} next={handleNextStep} data={data} />,
-        <CollectFormTree prev={handlePrevStep} next={handleNextStep} data={data} />,
+        <CollectFormThree prev={handlePrevStep} next={handleNextStep} data={data} />,
         <CollectFormFour prev={handlePrevStep} next={handleNextStep} data={data} />,
         <CollectFormSummary prev={handlePrevStep} next={handleSubmit} data={data} />,
         <CollectFormThanks />

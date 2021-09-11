@@ -3,7 +3,7 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import CollectBtn from './CollectBtn';
 
-const CollectFormTree = ({ prev, next, data }) => {
+const CollectFormThree = ({ prev, next, data }) => {
     const [isActive, setIsActive] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
     const optionsLocalization = [
@@ -49,16 +49,11 @@ const CollectFormTree = ({ prev, next, data }) => {
         helpGroups: Yup
             .array()
             .min(1, 'Zaznacz co najmniej jedną grupę'),
-        // localizationSpecific: Yup
-        //     .string()
-        //     .min(3, 'Nazwa musi mieć co najmniej trzy znaki')
-        //     .required('Zaznacz komu chcesz pomóc, lub wpisz nazwę organizacji'),
-
-        // localizationSpecific: Yup
-        //     .mixed().when('helpGroups', {
-        //         is: false,
-        //         then: Yup.string().min(3, 'za krótko').required('Zaznacz komu chcesz pomóc, lub wpisz nazwę organizacji')
-        //     })
+        localizationSpecific: Yup
+            .string()
+            .min(2, 'Nazwa musi mieć co najmniej dwa znaki')
+            .max(50, 'Zbyt długa nazwa')
+            .optional()
     })
 
     return (
@@ -72,8 +67,8 @@ const CollectFormTree = ({ prev, next, data }) => {
                 onSubmit={handleSubmit}
             >
                 {({ values }) => (
-                    <Form className='collect__form__tree'>
-                        <div className='collect__form__tree__box'>
+                    <Form className='collect__form__three'>
+                        <div className='collect__form__three__box'>
                             <div className='collect__form__select'
                                 onClick={() => handleActive(true)}
                             >
@@ -84,7 +79,7 @@ const CollectFormTree = ({ prev, next, data }) => {
                                     {null}
                                 </div>
                                 <ul
-                                    className={isActive ? 'collect__form__select__options-active tree__select' : 'collect__form__select__options tree__select'}
+                                    className={isActive ? 'collect__form__select__options-active three__select' : 'collect__form__select__options three__select'}
                                 >
                                     {optionsLocalization.map(option => (
                                         <li
@@ -98,7 +93,7 @@ const CollectFormTree = ({ prev, next, data }) => {
                                         </li>
                                     ))}
                                 </ul>
-                                <ErrorMessage name='localization' component='div' className='collect__error__msg' />
+                                <ErrorMessage name='localization' component='div' className='collect__form__three__error error' />
                             </div>
                             <div className='collect__form__groups'>
                                 <h3 className='collect__form__subtitle'>Komu chcesz pomóc?</h3>
@@ -118,7 +113,7 @@ const CollectFormTree = ({ prev, next, data }) => {
                                         </span>
                                     ))}
                                 </div>
-                                <ErrorMessage name='helpGroups' component='div' className='collect__error__msg' />
+                                <ErrorMessage name='helpGroups' component='div' className='collect__form__three__error error' />
                             </div>
                             <div className='collect__form__local'>
                                 <h3 className='collect__form__subtitle'>
@@ -127,7 +122,7 @@ const CollectFormTree = ({ prev, next, data }) => {
                                 <Field name='localizationSpecific'
                                     className='collect__form__local__input'
                                 />
-                                <ErrorMessage name='localizationSpecific' component='div' className='collect__error__msg' />
+                                <ErrorMessage name='localizationSpecific' component='div' className='collect__form__three__error error' />
                             </div>
                         </div>
                         <div className='collect__form__btns'>
@@ -141,4 +136,4 @@ const CollectFormTree = ({ prev, next, data }) => {
     );
 }
 
-export default CollectFormTree;
+export default CollectFormThree;
