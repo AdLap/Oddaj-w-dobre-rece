@@ -5,7 +5,7 @@ import HomeFooter from './HomeFooter';
 import HomeFourSteps from './steps/HomeFourSteps';
 import HomeHeader from './header/HomeHeader';
 import HomeMainSection from './HomeMainSection';
-import HomeTreeColumns from './HomeTreeColumns';
+import HomeThreeColumns from './HomeThreeColumns';
 import HomeWhoWeHelp from './organizations/HomeWhoWeHelp';
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
         <>
             <HomeHeader />
             <HomeMainSection />
-            <HomeTreeColumns />
+            <HomeThreeColumns />
             <HomeFourSteps />
             <HomeAboutUs />
             <HomeWhoWeHelp />

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HomeTreeColumns = () => {
+const HomeThreeColumns = () => {
 
     return (
         <section className='columns'>
@@ -31,4 +31,4 @@ const HomeTreeColumns = () => {
     )
 }
 
-export default HomeTreeColumns;
+export default HomeThreeColumns;
