@@ -1,24 +1,27 @@
 import React from 'react';
 import image from '../../assets/People.jpg';
 import Title from '../utility/Title';
-import styles from './HomeAboutUs.module.scss';
-import CSSModules from 'react-css-modules';
+import sign from '../../assets/Signature.svg';
+import './HomeAboutUs.scss';
 
 const HomeAboutUs = () => {
     return (
-        <section styleName='about' id='about'>
-            <div styleName='description'>
+        <section className='about' id='about'>
+            <div className='about__description'>
                 <Title text='O nas' />
-                <p styleName='info'>
+                <p className='about__description__info'>
                     Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery.
                     Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.
                 </p>
+                <div className='about__description__sign'>
+                    <img src={sign} alt='sign' />
+                </div>
             </div>
-            <picture styleName='image'>
-                <img styleName='pic' src={image} alt={image} />
+            <picture className='about__image'>
+                <img className='about__image__pic' src={image} alt={image} />
             </picture>
         </section>
     )
 }
 
-export default CSSModules(HomeAboutUs, styles);
+export default HomeAboutUs;

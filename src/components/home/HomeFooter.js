@@ -1,14 +1,16 @@
 import React from 'react';
-import styles from './HomeFooter.module.scss';
-import CSSModules from 'react-css-modules';
+import './HomeFooter.scss';
 
 const HomeFooter = () => {
     return (
-        <footer styleName='footer'>
-            <a styleName='fb' href='https://facebook.com' target='_blank'>{null}</a>
-            <a styleName='insta' href='https://instagram.com' target='_blank'>{null}</a>
+        <footer className='footer'>
+            <div className='container-main footer__container'>
+                <a className='footer__fb' href='https://facebook.com' target='_blank'>{null}</a>
+                <a className='footer__insta' href='https://instagram.com' target='_blank'>{null}</a>
+            </div>
+
         </footer>
     )
 }
 
-export default CSSModules(HomeFooter, styles);
+export default HomeFooter;

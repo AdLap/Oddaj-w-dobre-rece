@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { db } from '../../../firebase';
-import Title from '../../utility/Title';
-import OrganizationsBtn from './OrganizationBtn';
-import OrganizationDes from './OrganizationDes';
-import OrganizationIntro from './OrganizationIntro';
-import Pagination from './Pagination';
-import { titles, fundation, organization, local } from '../../utility/organizations';
-import styles from './HomeWhoWeHelp.module.scss';
-import CSSModules from 'react-css-modules';
+import { db } from '../../firebase';
+import Title from '../utility/Title';
+import OrganizationsBtn from './organizations/OrganizationBtn';
+import OrganizationDes from './organizations/OrganizationDes';
+import OrganizationIntro from './organizations/OrganizationIntro';
+import Pagination from './organizations/Pagination';
+import { titles, fundation, organization, local } from '../utility/organizations';
+import './HomeWhoWeHelp.scss';
 
 const HomeWhoWeHelp = () => {
     const [title, setTitle] = useState(titles.fund);
@@ -50,15 +49,15 @@ const HomeWhoWeHelp = () => {
     const pageNumb = number => setCurrPage(number)
 
     return (
-        <section styleName='organizations' id='organizations'>
-            <div styleName='container'>
+        <section className='organizations' id='organizations'>
+            <div className='container-main'>
                 <Title text='Komu pomagamy?' />
-                <div styleName='btns'>
+                <div className='organizations__btns'>
                     <OrganizationsBtn text='Fundacjom' id='fund' handleBtnId={handleOrgList} style={org === fundation ? 'btn-active' : 'btn'} />
                     <OrganizationsBtn text={'Organizacjom\npozarządowym'} id='org' handleBtnId={handleOrgList} style={org === organization ? 'btn-active' : 'btn'} />
                     <OrganizationsBtn text={'Lokalnym\nzbiórkom'} id='loc' handleBtnId={handleOrgList} style={org === local ? 'btn-active' : 'btn'} />
                 </div>
-                <div styleName='list'>
+                <div className='organizations__list'>
                     <OrganizationIntro des={title} />
                     <OrganizationDes organization={currOrg} />
                     <Pagination nr={org.length / orgPerPage} paginate={pageNumb} />
@@ -68,5 +67,4 @@ const HomeWhoWeHelp = () => {
     )
 }
 
-export default CSSModules(HomeWhoWeHelp, styles);
-
+export default HomeWhoWeHelp;

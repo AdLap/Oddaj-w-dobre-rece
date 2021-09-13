@@ -1,6 +1,8 @@
+@import '../../../scss/settings/colors';
+
 .steps__item {
     width: 148px;
-    height: 172px;
+    min-height: 198px;
 
     &__img {
         width: 83px;

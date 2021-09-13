@@ -7,7 +7,7 @@ const HomeMainSection = () => {
     const textTitle =  'Zacznij pomagać!\nOddaj niechciane rzeczy w zaufane ręce';
 
     return (
-        <section className='home__main' id='home'>
+        <section className='home__main container-main' id='home'>
             <div className='home__main__img'>
                 <img className='home__main__img__item' src={Hero} alt='Oddaj rzeczy' />
             </div>

@@ -9,7 +9,7 @@ const HomeNavBar = () => {
                 offset={0}
                 duration={300}
                 className='home__header__nav__item'
-                activeStyle={{border: '.75px solid #3C3C3C'}}
+                activeStyle={{ border: '.75px solid #3C3C3C' }}
             >
                 Start
             </NavHashLink>
@@ -18,29 +18,37 @@ const HomeNavBar = () => {
                 offset={0}
                 duration={300}
                 className='home__header__nav__item'
-                activeStyle={{border: '.75px solid #3C3C3C'}}
-            >O co chodzi?</NavHashLink>
+                activeStyle={{ border: '.75px solid #3C3C3C' }}
+            >
+                O co chodzi?
+            </NavHashLink>
             <NavHashLink
                 smooth to='/#about'
                 offset={0}
                 duration={300}
                 className='home__header__nav__item'
-                activeStyle={{border: '.75px solid #3C3C3C'}}
-            >O nas</NavHashLink>
+                activeStyle={{ border: '.75px solid #3C3C3C' }}
+            >
+                O nas
+            </NavHashLink>
             <NavHashLink
                 smooth to='/#organizations'
                 offset={0}
                 duration={300}
                 className='home__header__nav__item'
-                activeStyle={{border: '.75px solid #3C3C3C'}}
-            >Fundacja i organizacje</NavHashLink>
+                activeStyle={{ border: '.75px solid #3C3C3C' }}
+            >
+                Fundacja i organizacje
+            </NavHashLink>
             <NavHashLink
                 smooth to='/#contact'
                 offset={0}
                 duration={300}
                 className='home__header__nav__item'
-                activeStyle={{border: '.75px solid #3C3C3C'}}
-            >Kontakt</NavHashLink>
+                activeStyle={{ border: '.75px solid #3C3C3C' }}
+            >
+                Kontakt
+            </NavHashLink>
         </nav>
     )
 }

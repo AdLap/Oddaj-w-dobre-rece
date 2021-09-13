@@ -2,12 +2,15 @@
     height: 100vh;
     display: flex;
     align-items: flex-start;
+    
+    position: relative;
 
     &__img {
         height: 100%;
-        width: 46.6%; //885px;
+        width: 50vw;
         overflow: hidden;
-        position: relative;
+      position: absolute;
+      right: 50%;
 
         &__item {
             height: 100%;
@@ -20,29 +23,13 @@
 
     &__description {
         align-self: center;
-        margin: 5% 14.5% 0 3.5%;
-        width: 674px;
+        max-width: 674px;
+        width: 50%;
 
-        // &__title {
-        //     font-size: 38px;
-        //     font-weight: 400;
-        //     line-height: 55px;
-        //     letter-spacing: -.76px;
-        //     text-align: center;
-        //     color: $color-main;
-        //     position: relative;
-            
-        //     &::after {
-        //         position: absolute;
-        //         bottom: -58px;
-        //         left: 50%;
-        //         transform: translateX(-50%);
-        //         content: '';
-        //         width: 253px;
-        //         height: 33px;
-        //         background: url('../../assets/Decoration.svg');
-        //     }
-        // }
+        position:absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
 
         &__btn {
             display: flex;
@@ -50,19 +37,6 @@
             align-items: center;
             gap: 44px;
             margin-top: 123px;
-            
-            // &__item {
-            //     border: .75px solid $color-main;
-            //     width: 310px;
-            //     height: 120px;
-            //     text-transform: uppercase;
-            //     font-size: 36px;
-            //     font-weight: 300;
-            //     line-height: 45px;
-            //     letter-spacing: 0;
-            //     padding: 13px 0;
-
-            // }
         }
     }
 }

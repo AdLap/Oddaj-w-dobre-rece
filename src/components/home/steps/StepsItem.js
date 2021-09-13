@@ -1,4 +1,5 @@
 import React from 'react';
+import './StepsItem.scss';
 
 const StepsItem = ({ img, title, description }) => {
     return (

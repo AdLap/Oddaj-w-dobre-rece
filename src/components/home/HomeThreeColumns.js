@@ -4,7 +4,7 @@ const HomeThreeColumns = () => {
 
     return (
         <section className='columns'>
-           <div className='columns__container'>
+           <div className='columns__container container-main'>
                <div className='columns__container__item'>
                    <h2 className='columns__container__item__number'>10</h2>
                    <h3 className='columns__container__item__title'>oddanych worków</h3>

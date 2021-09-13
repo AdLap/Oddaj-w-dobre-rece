@@ -1,12 +1,12 @@
 import React from 'react';
 import HomeAboutUs from './HomeAboutUs';
-import HomeContact from './contact/HomeContact';
+import HomeContact from './HomeContact';
 import HomeFooter from './HomeFooter';
-import HomeFourSteps from './steps/HomeFourSteps';
+import HomeFourSteps from './HomeFourSteps';
 import HomeHeader from './header/HomeHeader';
 import HomeMainSection from './HomeMainSection';
 import HomeThreeColumns from './HomeThreeColumns';
-import HomeWhoWeHelp from './organizations/HomeWhoWeHelp';
+import HomeWhoWeHelp from './HomeWhoWeHelp';
 
 const Home = () => {
     return (
