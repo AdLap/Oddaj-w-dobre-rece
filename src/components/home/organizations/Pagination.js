@@ -1,6 +1,6 @@
+import React, { useState } from 'react';
 import styles from './Pagination.module.scss';
 import CSSModules from 'react-css-modules';
-import { useState } from 'react/cjs/react.development';
 
 const Pagination = ({ nr, paginate }) => {
     const [page, setPage] = useState(1)
@@ -9,13 +9,13 @@ const Pagination = ({ nr, paginate }) => {
         pageNr.push(i);
     }
 
-    const clickHandler = (number) => {      
+    const clickHandler = (number) => {
         if (typeof paginate === "function") {
             paginate(number);
         }
         setPage(number);
     }
- 
+
     return (
         <div styleName={nr > 1 ? 'pagination' : 'hide'}>
             {pageNr.map((number, idx) => <div
