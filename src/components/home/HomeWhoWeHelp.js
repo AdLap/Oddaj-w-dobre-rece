@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { db } from '../../firebase';
+import React, { useState } from 'react';
+// import { db } from '../../firebase';
 import Title from '../utility/Title';
 import OrganizationsBtn from './organizations/OrganizationBtn';
 import OrganizationDes from './organizations/OrganizationDes';
@@ -18,7 +18,7 @@ const HomeWhoWeHelp = () => {
     const idxFirstOrg = idxLastOrg - orgPerPage;
     const currOrg = org.slice(idxFirstOrg, idxLastOrg);
 
-    // useEffect(() => {
+    // useEffect(() => { // TODO
     //     // const unsubscribe = db.collection('organizations')
     //     //     .onSnapshot(snap => {
     //     //         setOrg(snap.docs.map(doc => doc.data()))
