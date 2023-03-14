@@ -1,0 +1,16 @@
+@import '../../../scss/settings/colors';
+
+.button {
+	border: none;
+	opacity: 0.6;
+	position: fixed;
+	top: 3.5%;
+	right: 3.5%;
+	width: 30px;
+	height: 30px;
+
+	&:hover {
+		border: none;
+		opacity: 1;
+	}
+}
