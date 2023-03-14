@@ -42,7 +42,7 @@ const LogIn = () => {
                                         <ErrorMessage name='password' component='div' className='login__data__form__error' />
                                     </label>
                                 </div>
-                                <div div className='login__data__btn'>
+                                <div className='login__data__btn'>
                                     <Link to='/rejestracja' className='login__data__btn__item'>Załóż konto</Link>
                                     <button type='submit' className='login__data__btn__item'>Zaloguj się</button>
                                 </div>
