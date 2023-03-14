@@ -11,9 +11,9 @@ const links = [
 	{ to: 'contact', name: 'Kontakt' },
 ]
 
-const HomeNavBar = () => {
+const HomeNavBar = ({ desktop, active, openMenu }) => {
 	return (
-		<nav styleName='navbar'>
+		<nav styleName={desktop ? 'navbar' : active ? 'navbar' : 'navbar-hide'}>
 			{links.map((link) => (
 				<ScrollLink
 					key={link.to}
@@ -22,6 +22,7 @@ const HomeNavBar = () => {
 					activeClass='link-active'
 					smooth={true}
 					spy={true}
+					onClick={openMenu}
 				>
 					{link.name}
 				</ScrollLink>
