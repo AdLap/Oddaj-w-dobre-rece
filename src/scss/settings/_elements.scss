@@ -1,40 +1,43 @@
 body {
-    font-family: $font-base;
+	font-family: $font-base;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 .container-main {
-    margin: 0 auto;
-    width: 85vw;
-    max-width: 1900px;
-    
+	margin: 0 auto;
+	width: 85vw;
+	max-width: 1900px;
 }
 
 li {
-    list-style: none;
+	list-style: none;
 }
 
 a {
-    border: .75px solid transparent;
-    background: transparent;
-    text-decoration: none;
-    color: $color-main;
-    transition: .3s;
-    cursor: pointer;
-    text-align: center;
+	border: 0.75px solid transparent;
+	background: transparent;
+	text-decoration: none;
+	color: $color-main;
+	transition: 0.3s;
+	cursor: pointer;
+	text-align: center;
 
-    &:hover {
-        border: .75px solid $color-main;
-    }
+	&:hover {
+		border-color: $color-main;
+	}
 }
 
 .error {
-    font-size: 14px;
-    font-weight: 400;
-    color: #ff0000;
+	font-size: 14px;
+	font-weight: 400;
+	color: #ff0000;
+}
+
+.link-active {
+	border-color: $color-main;
 }

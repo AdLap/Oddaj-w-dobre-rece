@@ -1,0 +1,19 @@
+@import '../../../scss/settings/colors';
+
+.header {
+  background: $color-bg;
+	position: sticky;
+	top: -57px;
+	right: 0;
+  padding-top: 35px;
+  width: 100%;
+	height: 101px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	z-index: 2;
+
+	.buttons {
+		margin-right: 10px;
+	}
+}
