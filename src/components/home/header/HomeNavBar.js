@@ -1,4 +1,6 @@
 import React from 'react'
+import CSSModules from 'react-css-modules'
+import styles from './HomeNavBar.module.scss'
 import { Link as ScrollLink } from 'react-scroll'
 
 const links = [
@@ -11,15 +13,15 @@ const links = [
 
 const HomeNavBar = () => {
 	return (
-		<nav className='home__header__nav'>
+		<nav styleName='navbar'>
 			{links.map((link) => (
-                <ScrollLink
+				<ScrollLink
 					key={link.to}
 					to={`${link.to}`}
-					className='home__header__nav__item'
-                    activeClass='link-active'
-                    smooth={true}
-                    spy={true}
+					className='navbar__item'
+					activeClass='link-active'
+					smooth={true}
+					spy={true}
 				>
 					{link.name}
 				</ScrollLink>
@@ -28,4 +30,4 @@ const HomeNavBar = () => {
 	)
 }
 
-export default HomeNavBar
+export default CSSModules(HomeNavBar, styles)
