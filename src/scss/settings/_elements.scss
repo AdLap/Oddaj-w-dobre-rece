@@ -1,3 +1,9 @@
+@import './breakpoints';
+
+html {
+	font-size: 16px;
+}
+
 body {
 	font-family: $font-base;
 }
@@ -10,8 +16,19 @@ body {
 
 .container-main {
 	margin: 0 auto;
-	width: 85vw;
-	max-width: 1900px;
+	width: 100%;
+
+	@include media-up($md) {
+		max-width: 1000px;
+	}
+
+	@include media-up($lg) {
+		max-width: 1200px;
+	}
+
+	@include media-up($xl) {
+		max-width: 1400px;
+	}
 }
 
 li {

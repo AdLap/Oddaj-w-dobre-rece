@@ -1,4 +1,5 @@
 // breakpoints - all for min-width
+$min-screen: 360px;
 $xs: 599px; // exception - only for max-width
 $sm: 600px;
 $md: 960px;
@@ -6,13 +7,13 @@ $lg: 1264px;
 $xl: 1904px;
 
 @mixin media-up($width) {
-  @media screen and (min-width: $width) {
-    @content;
-  }
+	@media screen and (min-width: $width) {
+		@content;
+	}
 }
 
 @mixin media-down($width) {
-  @media screen and (max-width: $width) {
-    @content;
-  }
+	@media screen and (max-width: $width) {
+		@content;
+	}
 }
