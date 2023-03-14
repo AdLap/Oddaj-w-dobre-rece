@@ -50,7 +50,7 @@ const Register = () => {
                                         <ErrorMessage name='password2' component='div' className='login__data__form__error' />
                                     </label>
                                 </div>
-                                <div div className='login__data__btn'>
+                                <div className='login__data__btn'>
                                     <button type='submit' className='login__data__btn__item'>Załóż konto</button>
                                     <Link to='/logowanie' className='login__data__btn__item'>Zaloguj się</Link>
                                 </div>
