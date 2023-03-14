@@ -1,5 +1,6 @@
 @import '../../../scss/settings/colors';
 
+.header-hidden,
 .header {
   background: $color-bg;
 	position: sticky;
@@ -15,5 +16,10 @@
 
 	.buttons {
 		margin-right: 10px;
+		z-index: 10;
 	}
 }
+ .header-hidden {
+	top: -101px;
+ }
+ 
