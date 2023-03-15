@@ -6,6 +6,11 @@ $md: 960px;
 $lg: 1264px;
 $xl: 1904px;
 
+//max-container width
+$container-max-md: 1000px;
+$container-max-lg: 1200px;
+$container-max-xl: 1400px;
+
 @mixin media-up($width) {
 	@media screen and (min-width: $width) {
 		@content;

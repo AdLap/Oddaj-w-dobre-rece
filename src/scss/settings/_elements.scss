@@ -19,15 +19,15 @@ body {
 	width: 100%;
 
 	@include media-up($md) {
-		max-width: 1000px;
+		max-width: $container-max-md;
 	}
 
 	@include media-up($lg) {
-		max-width: 1200px;
+		max-width: $container-max-lg;
 	}
 
 	@include media-up($xl) {
-		max-width: 1400px;
+		max-width: $container-max-xl;
 	}
 }
 
