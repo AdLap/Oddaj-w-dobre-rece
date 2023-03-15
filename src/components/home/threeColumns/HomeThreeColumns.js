@@ -7,7 +7,7 @@ import { columns } from '../../../data/threeColumns'
 const HomeThreeColumns = () => {
 	return (
 		<section styleName='columns'>
-			<div styleName='columns__container' className='container-main'>
+			<div styleName='container' className='container-main'>
 				{columns.map((column) => (
 					<Column
 						key={column.id}
