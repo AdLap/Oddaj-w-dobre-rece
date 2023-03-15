@@ -1,6 +1,6 @@
 import React from 'react'
 import HomeAboutUs from './about/HomeAboutUs'
-import HomeContact from './HomeContact'
+import HomeContact from './contact/HomeContact'
 import HomeFooter from './HomeFooter'
 import HomeFourSteps from './steps/HomeFourSteps'
 import HomeHeader from './header/HomeHeader'
