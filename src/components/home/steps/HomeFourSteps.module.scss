@@ -1,0 +1,30 @@
+@import '../../../scss/settings/_colors.scss';
+@import '../../../scss/settings/breakpoints';
+
+.steps {
+	padding: 55px 0 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.wrapper {
+		background: $color-bg;
+		width: 100%;
+		margin: 92px 0 35px;
+	}
+
+	.container {
+		padding: 73px 16px 80px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+
+	a {
+		width: 310px;
+    font-size: 36px;
+	}
+}
