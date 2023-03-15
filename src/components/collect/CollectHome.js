@@ -2,7 +2,7 @@ import React from 'react'
 import CollectMain from './CollectMain'
 import CollectForm from './collectForm/CollectForm'
 import HomeContact from '../home/contact/HomeContact'
-import HomeFooter from '../home/HomeFooter'
+import HomeFooter from '../home/footer/HomeFooter'
 
 const CollectHome = () => {
 	return (

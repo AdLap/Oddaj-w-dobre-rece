@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import CSSModules from 'react-css-modules'
-import styles from './ContactForm.module.scss'
 import { ErrorMessage, Field, Formik } from 'formik'
 import * as Yup from 'yup'
 import axios from 'axios'
@@ -78,4 +76,4 @@ const ContactForm = () => {
 	)
 }
 
-export default CSSModules(ContactForm, styles)
+export default ContactForm
