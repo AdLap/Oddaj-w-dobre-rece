@@ -1,5 +1,5 @@
 import React from 'react'
-import HomeAboutUs from './HomeAboutUs'
+import HomeAboutUs from './about/HomeAboutUs'
 import HomeContact from './HomeContact'
 import HomeFooter from './HomeFooter'
 import HomeFourSteps from './steps/HomeFourSteps'
