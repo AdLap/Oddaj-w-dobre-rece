@@ -1,0 +1,99 @@
+@import '../../../scss/settings/colors';
+@import '../../../scss/settings/breakpoints';
+@import '../../../scss/settings/fonts';
+
+.container {
+	background: $color-bg;
+	height: 100vh;
+
+	.about {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		overflow: hidden;
+		padding-top: 2rem;
+
+		@include media-up($md) {
+			padding: 0;
+			flex-direction: row;
+		}
+
+		.description {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+
+			@include media-up($md) {
+				width: 50%;
+				padding-right: 2rem;
+			}
+
+			.info {
+				margin-top: 90px;
+				width: 100%;
+				font-weight: 400;
+				line-height: 1.8;
+				letter-spacing: -0.6px;
+				color: $color-main;
+				text-align: center;
+
+				@include fluid-font(20px, 30px);
+
+				@include media-up($md) {
+					margin-top: 114px;
+				}
+			}
+
+			.sign {
+				width: 150px;
+				align-self: flex-end;
+
+				@include media-up($md) {
+					width: 210px;
+					margin-top: 2rem;
+				}
+
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+
+		.image {
+			height: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			@include media-up($sm) {
+				width: 100%;
+			}
+
+			@include media-up($md) {
+				width: 50%;
+				height: 100%;
+				overflow: hidden;
+			}
+
+			img {
+				height: 100%;
+				width: auto;
+
+				@include media-up($sm) {
+					width: 100%;
+					height: auto;
+				}
+
+				@include media-up($md) {
+					height: 100%;
+					width: auto;
+				}
+			}
+		}
+	}
+}
