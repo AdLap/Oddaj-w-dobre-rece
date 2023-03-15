@@ -1,0 +1,14 @@
+@import '../../scss/settings/colors';
+@import '../../scss/settings/fonts';
+
+.button {
+  border: .75px solid $color-main;
+  text-transform: uppercase;
+  font-weight: 300;
+  line-height: 1.25;
+  letter-spacing: 0;
+  padding: 13px 0;
+  white-space: pre-wrap;
+
+  @include fluid-font(16px, 36px);
+}

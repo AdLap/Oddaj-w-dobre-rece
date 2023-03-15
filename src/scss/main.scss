@@ -3,14 +3,15 @@
 @import 'settings/fonts';
 @import 'settings/colors';
 @import 'settings/elements';
+@import 'settings/breakpoints';
 //@import 'elements/Title';
-@import 'elements/Btn';
+// @import 'elements/Btn';
 //@import 'elements/StepsItem';
 
-@import 'elements/HomeHeader';
-@import 'elements/HomeMainSection';
+// @import 'elements/HomeHeader';
+// @import 'elements/HomeMainSection';
 @import 'elements/LogIn';
-@import 'elements/HomeThreeColumns';
+// @import 'elements/HomeThreeColumns';
 //@import 'elements/HomeFourSteps';
 //@import 'elements/ContactForm';
 @import '../components/collect/collectForm/CollectForm';

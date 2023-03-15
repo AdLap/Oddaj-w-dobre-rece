@@ -1,56 +1,34 @@
-import React from 'react';
-import { NavHashLink } from 'react-router-hash-link';
+import React from 'react'
+import CSSModules from 'react-css-modules'
+import styles from './HomeNavBar.module.scss'
+import { Link as ScrollLink } from 'react-scroll'
 
-const HomeNavBar = () => {
-    return (
-        <nav className='home__header__nav'>
-            <NavHashLink
-                smooth to='/#home'
-                offset={0}
-                duration={300}
-                className='home__header__nav__item'
-                activeStyle={{ border: '.75px solid #3C3C3C' }}
-            >
-                Start
-            </NavHashLink>
-            <NavHashLink
-                smooth to='/#info'
-                offset={0}
-                duration={300}
-                className='home__header__nav__item'
-                activeStyle={{ border: '.75px solid #3C3C3C' }}
-            >
-                O co chodzi?
-            </NavHashLink>
-            <NavHashLink
-                smooth to='/#about'
-                offset={0}
-                duration={300}
-                className='home__header__nav__item'
-                activeStyle={{ border: '.75px solid #3C3C3C' }}
-            >
-                O nas
-            </NavHashLink>
-            <NavHashLink
-                smooth to='/#organizations'
-                offset={0}
-                duration={300}
-                className='home__header__nav__item'
-                activeStyle={{ border: '.75px solid #3C3C3C' }}
-            >
-                Fundacja i organizacje
-            </NavHashLink>
-            <NavHashLink
-                smooth to='/#contact'
-                offset={0}
-                duration={300}
-                className='home__header__nav__item'
-                activeStyle={{ border: '.75px solid #3C3C3C' }}
-            >
-                Kontakt
-            </NavHashLink>
-        </nav>
-    )
+const links = [
+	{ to: 'home', name: 'Start' },
+	{ to: 'info', name: 'O co chodzi?' },
+	{ to: 'about', name: 'O nas' },
+	{ to: 'organizations', name: 'Fundacja i organizacje' },
+	{ to: 'contact', name: 'Kontakt' },
+]
+
+const HomeNavBar = ({ desktop, active, openMenu }) => {
+	return (
+		<nav styleName={desktop ? 'navbar' : active ? 'navbar' : 'navbar-hide'}>
+			{links.map((link) => (
+				<ScrollLink
+					key={link.to}
+					to={`${link.to}`}
+					className='navbar__item'
+					activeClass='link-active'
+					smooth={true}
+					spy={true}
+					onClick={openMenu}
+				>
+					{link.name}
+				</ScrollLink>
+			))}
+		</nav>
+	)
 }
 
-export default HomeNavBar;
+export default CSSModules(HomeNavBar, styles)
