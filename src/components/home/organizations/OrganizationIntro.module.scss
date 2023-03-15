@@ -1,12 +1,16 @@
 @import '../../../scss/settings/colors';
+@import '../../../scss/settings/fonts';
+@import '../../../scss/settings/breakpoints';
 
 .description {
-    width: 640px;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 30px;
-    letter-spacing: 0;
-    color: $color-main;
-    text-align: center;
-    margin: 0 auto 66px auto;
+	width: 100%;
+	max-width: 640px;
+	font-weight: 400;
+	line-height: 1.3;
+	letter-spacing: 0;
+	color: $color-main;
+	text-align: center;
+	margin: 0 auto 66px;
+
+	@include fluid-font(16px, 22px);
 }
