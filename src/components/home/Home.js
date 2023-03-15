@@ -6,7 +6,7 @@ import HomeFourSteps from './steps/HomeFourSteps'
 import HomeHeader from './header/HomeHeader'
 import HomeMainSection from './main/HomeMainSection'
 import HomeThreeColumns from './threeColumns/HomeThreeColumns'
-import HomeWhoWeHelp from './HomeWhoWeHelp'
+import HomeWhoWeHelp from './organizations/HomeWhoWeHelp'
 
 const Home = () => {
 	return (

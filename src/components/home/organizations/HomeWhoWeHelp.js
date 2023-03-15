@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
+import CSSModules from 'react-css-modules'
+import styles from './HomeWhoWeHelp.module.scss'
 // import { db } from '../../firebase';
-import Title from '../utility/Title'
-import OrganizationsBtn from './organizations/OrganizationBtn'
-import OrganizationDes from './organizations/OrganizationDes'
-import OrganizationIntro from './organizations/OrganizationIntro'
-import Pagination from './organizations/Pagination'
+import Title from '../../utility/Title'
+import OrganizationsBtn from './OrganizationBtn'
+import OrganizationDes from './OrganizationDes'
+import OrganizationIntro from './OrganizationIntro'
+import Pagination from './Pagination'
 import {
 	titles,
 	fundation,
 	organization,
 	local,
-} from '../../data/organizations'
-import './HomeWhoWeHelp.scss'
+} from '../../../data/organizations'
 
 const HomeWhoWeHelp = () => {
 	const [title, setTitle] = useState(titles.fund)
@@ -53,10 +54,10 @@ const HomeWhoWeHelp = () => {
 	const pageNumb = (number) => setCurrPage(number)
 
 	return (
-		<section className='organizations' id='organizations'>
+		<section styleName='organizations' id='organizations'>
 			<div className='container-main'>
 				<Title text='Komu pomagamy?' />
-				<div className='organizations__btns'>
+				<div styleName='switch'>
 					<OrganizationsBtn
 						text='Fundacjom'
 						id='fund'
@@ -76,7 +77,7 @@ const HomeWhoWeHelp = () => {
 						style={org === local ? 'btn-active' : 'btn'}
 					/>
 				</div>
-				<div className='organizations__list'>
+				<div styleName='list'>
 					<OrganizationIntro des={title} />
 					<OrganizationDes organization={currOrg} />
 					<Pagination nr={org.length / orgPerPage} paginate={pageNumb} />
@@ -86,4 +87,4 @@ const HomeWhoWeHelp = () => {
 	)
 }
 
-export default HomeWhoWeHelp
+export default CSSModules(HomeWhoWeHelp, styles)
