@@ -22,6 +22,7 @@ const HomeNavBar = ({ desktop, active, openMenu }) => {
 					activeClass='link-active'
 					smooth={true}
 					spy={true}
+					offset={link.to === 'home' && -101}
 					onClick={openMenu}
 				>
 					{link.name}
