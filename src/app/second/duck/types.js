@@ -1,0 +1,7 @@
+const ADD_SECOND = 'ADD_SECOND'
+const RESET_SECOND = 'RESET_SECOND'
+
+export default {
+  ADD_SECOND,
+  RESET_SECOND
+}
