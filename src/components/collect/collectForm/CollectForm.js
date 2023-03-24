@@ -86,12 +86,10 @@ const CollectForm = () => {
 		<section>
 			{currStep < 4 && <CollectFormInfo text={title[currStep]} />}
 			<div styleName='container'>
-				{currStep < 4 && (
-					<div styleName='page'>
-						Krok {currStep + 1}/4
-					</div>
-				)}
-				<div styleName='step' className='container-main'>{steps[currStep]}</div>
+				{currStep < 4 && <div styleName='page'>Krok {currStep + 1}/4</div>}
+				<div styleName='step' className='container-main'>
+					{steps[currStep]}
+				</div>
 			</div>
 		</section>
 	)

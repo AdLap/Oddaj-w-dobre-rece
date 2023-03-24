@@ -24,7 +24,7 @@ const CollectFormOne = ({ next, data }) => {
 
 	return (
 		<>
-			<h2 styleName='title'>Zaznacz co chcesz odddać:</h2>
+			<h2 data-collect-form-title>Zaznacz co chcesz odddać:</h2>
 			<Formik
 				initialValues={data}
 				onSubmit={handleSubmit}
@@ -34,6 +34,12 @@ const CollectFormOne = ({ next, data }) => {
 					<Form data-form-step-one>
 						{options.map((option) => (
 							<label key={option} data-label-step-one>
+								<Field
+									type='radio'
+									name='type'
+									value={option}
+									data-radio-step-one
+								/>
 								<span
 									data-check-step-one={
 										values.type.includes(option) ? 'active' : ''
@@ -41,18 +47,15 @@ const CollectFormOne = ({ next, data }) => {
 								>
 									{null}
 								</span>
-								<Field
-									type='radio'
-									name='type'
-									value={option}
-									data-radio-step-one
-								/>
-								<span data-option-step-one>
-									{option}
-									</span>
+								<span data-option-step-one>{option}</span>
 							</label>
 						))}
-						<ErrorMessage name='type' component='div' className='error' data-error-step-one/>
+						<ErrorMessage
+							name='type'
+							component='div'
+							className='error'
+							data-error-step-one
+						/>
 						<div className='collect__form__btns'>
 							<CollectBtn type='submit' text='Dalej' />
 						</div>
