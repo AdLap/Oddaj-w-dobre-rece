@@ -2,15 +2,6 @@
 @import '../../../scss/settings/fonts';
 @import '../../../scss/settings/breakpoints';
 
-.title {
-	font-weight: 600;
-	line-height: 1.25;
-	color: $color-input-txt;
-	margin-bottom: 40px;
-
-	@include fluid-font(26px, 36px);
-}
-
 [data-form-step-one] {
 	display: flex;
 	flex-direction: column;
@@ -18,14 +9,14 @@
 	align-items: flex-start;
 	gap: 25px;
 	color: $color-input-txt;
-	position: relative;
-    margin: 0 auto;
+	margin: 0 auto;
 
 	[data-label-step-one] {
 		font-weight: 300;
 		line-height: 1.33;
 		display: flex;
 		align-items: center;
+		cursor: pointer;
 
 		@include fluid-font(18px, 24px);
 
@@ -59,10 +50,6 @@
 
 	[data-error-step-one] {
 		position: absolute;
-		bottom: 68px;
-
-		@include media-up($sm) {
-			bottom: 90px;
-		}
+		bottom: 100px;
 	}
 }

@@ -1,0 +1,14 @@
+@import '../../../scss/settings/fonts';
+
+[data-form-step-two] {
+  @include fluid-font(18px, 24px);
+  line-height: 1.33;
+  font-weight: 300;
+
+  [data-box-step-two] {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+  }
+}
