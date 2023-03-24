@@ -67,3 +67,12 @@ button {
 .link-active {
 	border-color: $color-main;
 }
+
+.collect__form__btns {
+	// position: absolute;
+	// bottom: 50px;
+	margin-top: 16px;
+	display: flex;
+	gap: 50px;
+	width: 100%;
+}
