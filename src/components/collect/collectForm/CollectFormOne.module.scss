@@ -1,0 +1,68 @@
+@import '../../../scss/settings/colors';
+@import '../../../scss/settings/fonts';
+@import '../../../scss/settings/breakpoints';
+
+.title {
+	font-weight: 600;
+	line-height: 1.25;
+	color: $color-input-txt;
+	margin-bottom: 40px;
+
+	@include fluid-font(26px, 36px);
+}
+
+[data-form-step-one] {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 25px;
+	color: $color-input-txt;
+	position: relative;
+    margin: 0 auto;
+
+	[data-label-step-one] {
+		font-weight: 300;
+		line-height: 1.33;
+		display: flex;
+		align-items: center;
+
+		@include fluid-font(18px, 24px);
+
+		[data-radio-step-one] {
+			width: 0;
+			height: 0;
+			opacity: 0;
+
+			&:checked + span {
+				background: $color-collect-accent;
+			}
+		}
+
+		[data-check-step-one] {
+			margin-right: 30px;
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			border: $border-main;
+			cursor: pointer;
+		}
+
+		[data-span-step-one='active'] {
+			background: $color-collect-accent;
+		}
+
+		[data-option-step-one] {
+			width: calc(100% - 70px);
+		}
+	}
+
+	[data-error-step-one] {
+		position: absolute;
+		bottom: 68px;
+
+		@include media-up($sm) {
+			bottom: 90px;
+		}
+	}
+}

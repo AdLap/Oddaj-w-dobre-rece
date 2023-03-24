@@ -9,8 +9,8 @@ const CollectMain = () => {
 	return (
 		<section styleName='collect'>
 			<div styleName='container'>
-				<div styleName='img'>
-					<img src={FormHero} alt={FormHero} styleName='pic' />
+				<div styleName='image'>
+					<img src={FormHero} alt={FormHero} />
 				</div>
 				<div styleName='desc'>
 					<Title text={'Oddaj rzeczy, których już nie chcesz\nPOTRZEBUJĄCYM'} />
