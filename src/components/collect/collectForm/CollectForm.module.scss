@@ -48,13 +48,6 @@
 	}
 }
 
-// &__subtitle {
-//     font-size: 24px;
-//     font-weight: 600;
-//     line-height: 32px;
-//     margin-bottom: 20px;
-// }
-
 [data-collect-form-select] {
 	width: 300px;
 	height: 49px;
@@ -91,7 +84,9 @@
 
 	[data-collect-form-select-options='active'] {
 		border: $border-main;
-		width: 86px;
+		min-width: 86px;
+		width: fit-content;
+		padding: 0 26px;
 		height: 185px;
 		display: flex;
 		flex-direction: column;
@@ -105,10 +100,7 @@
 		cursor: default;
 		transition: 0.3s ease-out; // TODO sprawdzić
 		z-index: 0;
-
-		@include media-up($md) {
-			background: $color-collect-form-bg;
-		}
+		background: $color-collect-form-bg;
 	}
 
 	[data-collect-form-select-options-item] {
@@ -128,6 +120,14 @@
 	@include media-up($md) {
 		max-width: 50%;
 	}
+}
+
+[data-collect-form-subtitle] {
+	font-weight: 600;
+	line-height: 1.33;
+	margin-bottom: 20px;
+
+	@include fluid-font(16px, 24px);
 }
 
 // &__btns {
