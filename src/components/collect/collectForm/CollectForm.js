@@ -10,7 +10,7 @@ import CollectFormSummary from './CollectFormSummary'
 import CollectFormThanks from './CollectFormThanks'
 
 const CollectForm = () => {
-	const [currStep, setCurrStep] = useState(3)
+	const [currStep, setCurrStep] = useState(0)
 
 	const [title] = useState([
 		'Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.',
