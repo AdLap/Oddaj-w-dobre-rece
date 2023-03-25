@@ -3,7 +3,7 @@ import CSSModules from 'react-css-modules'
 import styles from './CollectFormOne.module.scss'
 import { ErrorMessage, Field, Form, Formik } from 'formik'
 import * as Yup from 'yup'
-import CollectBtn from './CollectBtn'
+import CollectButtons from '../CollectButtons'
 
 const CollectFormOne = ({ next, data }) => {
 	const options = [
@@ -56,9 +56,7 @@ const CollectFormOne = ({ next, data }) => {
 							className='error'
 							data-error-step-one
 						/>
-						<div className='collect__form__btns'>
-							<CollectBtn type='submit' text='Dalej' />
-						</div>
+						<CollectButtons />
 					</Form>
 				)}
 			</Formik>

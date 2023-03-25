@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import CSSModules from 'react-css-modules'
 import styles from './CollectForm.module.scss'
 import CollectFormInfo from './CollectFormInfo'
-import CollectFormOne from './CollectFormOne'
-import CollectFormTwo from './CollectFormTwo'
-import CollectFormThree from './CollectFormThree'
-import CollectFormFour from './CollectFormFour'
-import CollectFormSummary from './CollectFormSummary'
-import CollectFormThanks from './CollectFormThanks'
+import CollectFormOne from './steps/CollectFormOne'
+import CollectFormTwo from './steps/CollectFormTwo'
+import CollectFormThree from './steps/CollectFormThree'
+import CollectFormFour from './steps/CollectFormFour'
+import CollectFormSummary from './steps/CollectFormSummary'
+import CollectFormThanks from './steps/CollectFormThanks'
 
 const CollectForm = () => {
 	const [currStep, setCurrStep] = useState(0)
@@ -66,17 +66,9 @@ const CollectForm = () => {
 	const steps = [
 		<CollectFormOne next={handleNextStep} data={data} />,
 		<CollectFormTwo prev={handlePrevStep} next={handleNextStep} data={data} />,
-		<CollectFormThree
-			prev={handlePrevStep}
-			next={handleNextStep}
-			data={data}
-		/>,
+		<CollectFormThree prev={handlePrevStep} next={handleNextStep} data={data} />,
 		<CollectFormFour prev={handlePrevStep} next={handleNextStep} data={data} />,
-		<CollectFormSummary
-			prev={handlePrevStep}
-			next={handleSubmit}
-			data={data}
-		/>,
+		<CollectFormSummary prev={handlePrevStep} next={handleSubmit} data={data} />,
 		<CollectFormThanks />,
 	]
 

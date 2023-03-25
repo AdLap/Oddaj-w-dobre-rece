@@ -3,7 +3,7 @@ import CSSModules from 'react-css-modules'
 import styles from './CollectFormTwo.module.scss'
 import { ErrorMessage, Form, Formik } from 'formik'
 import * as Yup from 'yup'
-import CollectBtn from './CollectBtn'
+import CollectButtons from '../CollectButtons'
 // import CollectSelect from './CollectSelect'; // TODO
 
 const CollectFormTwo = ({ prev, next, data }) => {
@@ -63,10 +63,7 @@ const CollectFormTwo = ({ prev, next, data }) => {
 								<ErrorMessage name='bags' component='div' className='error' />
 							</div>
 						</div>
-						<div className='collect__form__btns'>
-							<CollectBtn onClick={() => prev(values)} text='Wstecz' />
-							<CollectBtn type='submit' text='Dalej' />
-						</div>
+						<CollectButtons prev={() => prev(values)} />
 					</Form>
 				)}
 			</Formik>

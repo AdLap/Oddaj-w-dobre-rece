@@ -3,7 +3,7 @@ import CSSModules from 'react-css-modules'
 import styles from './CollectFormThree.module.scss'
 import { ErrorMessage, Field, Form, Formik } from 'formik'
 import * as Yup from 'yup'
-import CollectBtn from './CollectBtn'
+import CollectButtons from '../CollectButtons'
 
 const CollectFormThree = ({ prev, next, data }) => {
 	const [isActive, setIsActive] = useState(false)
@@ -137,10 +137,7 @@ const CollectFormThree = ({ prev, next, data }) => {
 								/>
 							</div>
 						</div>
-						<div className='collect__form__btns'>
-							<CollectBtn onClick={() => prev(values)} text='Wstecz' />
-							<CollectBtn type='submit' text='Dalej' />
-						</div>
+						<CollectButtons prev={() => prev(values)} />
 					</Form>
 				)}
 			</Formik>

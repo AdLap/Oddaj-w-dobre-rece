@@ -1,7 +1,7 @@
 import React from 'react'
 import CSSModules from 'react-css-modules'
 import styles from './CollectFormSummary.module.scss'
-import CollectBtn from './CollectBtn'
+import CollectButtons from '../CollectButtons'
 
 const CollectFormSummary = ({ prev, next, data }) => {
 	return (
@@ -65,15 +65,7 @@ const CollectFormSummary = ({ prev, next, data }) => {
 						<span styleName='summary__data'>{data.note}</span>
 					</div>
 				</div>
-
-				<div className='collect__form__btns'>
-					<CollectBtn onClick={() => prev(data)} text='Wstecz' />
-					<CollectBtn
-						type='submit'
-						onClick={() => next(data)}
-						text='Potwierdź'
-					/>
-				</div>
+				<CollectButtons prev={() => prev(data)} send={() => next(data)}/>
 			</div>
 		</>
 	)
