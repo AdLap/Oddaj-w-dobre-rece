@@ -4,9 +4,10 @@ import styles from './CollectFormThree.module.scss'
 import { ErrorMessage, Field, Form, Formik } from 'formik'
 import * as Yup from 'yup'
 import CollectButtons from '../CollectButtons'
+import CollectSelect from '../CollectSelect'
 
 const CollectFormThree = ({ prev, next, data }) => {
-	const [isActive, setIsActive] = useState(false)
+	// const [isActive, setIsActive] = useState(false)
 	const [isChecked, setIsChecked] = useState(false)
 	const optionsLocalization = [
 		'Poznań',
@@ -27,8 +28,12 @@ const CollectFormThree = ({ prev, next, data }) => {
 		next(values)
 	}
 
-	const handleActive = () => {
-		setIsActive(!isActive)
+	// const handleActive = () => {
+	// 	setIsActive(!isActive)
+	// }
+
+	const handleSelect = (option) => {
+		data.localization = option
 	}
 
 	const handleChangeCheckbox = (values, option) => {
@@ -66,7 +71,13 @@ const CollectFormThree = ({ prev, next, data }) => {
 				{({ values }) => (
 					<Form data-form-step-three>
 						<div data-box-step-three>
-							<div data-collect-form-select onClick={() => handleActive(true)}>
+							<CollectSelect
+								options={optionsLocalization}
+								field={values.localization}
+								name='localization'
+								handleChange={handleSelect}
+							/>
+							{/* <div data-collect-form-select onClick={() => handleActive(true)}>
 								{values.localization ? values.localization : '— wybierz —'}
 								<div data-collect-form-select-arrow={isActive ? 'active' : ''}>
 									{null}
@@ -86,14 +97,14 @@ const CollectFormThree = ({ prev, next, data }) => {
 											{option}
 										</li>
 									))}
-								</ul>
+								</ul> */}
 								<ErrorMessage
 									data-error-step-three
 									name='localization'
 									component='div'
 									className='error'
 								/>
-							</div>
+							{/* </div> */}
 							<div data-groups-step-three>
 								<h3 data-collect-form-subtitle>Komu chcesz pomóc?</h3>
 								<div data-checkbox-step-three>

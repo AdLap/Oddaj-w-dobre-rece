@@ -4,18 +4,25 @@ import styles from './CollectFormTwo.module.scss'
 import { ErrorMessage, Form, Formik } from 'formik'
 import * as Yup from 'yup'
 import CollectButtons from '../CollectButtons'
-// import CollectSelect from './CollectSelect'; // TODO
+import CollectSelect from './../CollectSelect' // TODO
 
 const CollectFormTwo = ({ prev, next, data }) => {
-	const [isActive, setIsActive] = useState(false)
+	// const [isActive, setIsActive] = useState(false)
 	const options = [1, 2, 3, 4, 5]
 
 	const handleSubmit = (values) => {
+		console.log(values)
 		next(values)
 	}
 
-	const handleActive = () => {
-		setIsActive(!isActive)
+	// const handleActive = () => {
+	// 	setIsActive(!isActive)
+	// }
+
+	const handleChange = (option) => {
+		console.log('calaue::', option, data)
+		data.bags = option
+		// handleActive(false)
 	}
 
 	const validationSchema = Yup.object().shape({
@@ -38,8 +45,13 @@ const CollectFormTwo = ({ prev, next, data }) => {
 					<Form data-form-step-two>
 						<div data-box-step-two>
 							<span data-label-step-two>Liczba 60l worków:</span>
-							{/* <CollectSelect options={options} field={values.bags} name='bags' /> */}
-							<div data-collect-form-select onClick={() => handleActive(true)}>
+							<CollectSelect
+								options={options}
+								field={values.bags}
+								name='bags'
+								handleChange={handleChange}
+							/>
+							{/* <div data-collect-form-select onClick={() => handleActive(true)}>
 								{values.bags ? values.bags : '— wybierz —'}
 								<div data-collect-form-select-arrow={isActive ? 'active' : ''}>
 									{null}
@@ -59,9 +71,9 @@ const CollectFormTwo = ({ prev, next, data }) => {
 											{option}
 										</li>
 									))}
-								</ul>
+								</ul> */}
 								<ErrorMessage name='bags' component='div' className='error' />
-							</div>
+							{/* </div> */}
 						</div>
 						<CollectButtons prev={() => prev(values)} />
 					</Form>
