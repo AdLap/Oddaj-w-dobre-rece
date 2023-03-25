@@ -80,8 +80,6 @@ const CollectForm = () => {
 		<CollectFormThanks />,
 	]
 
-	console.log('data::', data)
-
 	return (
 		<section>
 			{currStep < 4 && <CollectFormInfo text={title[currStep]} />}

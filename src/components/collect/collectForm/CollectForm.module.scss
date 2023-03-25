@@ -2,10 +2,6 @@
 @import '../../../scss/settings/breakpoints';
 @import '../../../scss/settings/fonts';
 
-// .collect-wrapper {
-//     margin-bottom: -200px;
-// }
-
 .container {
 	position: relative;
 	width: 100%;
@@ -129,10 +125,3 @@
 
 	@include fluid-font(16px, 24px);
 }
-
-// &__btns {
-//     position: absolute;
-//     bottom: 50px;
-//     display: flex;
-//     gap: 50px;
-// }
