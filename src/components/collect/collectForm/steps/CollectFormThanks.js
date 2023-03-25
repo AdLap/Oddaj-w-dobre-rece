@@ -1,7 +1,7 @@
 import React from 'react'
 import CSSModules from 'react-css-modules'
 import styles from './CollectFormThanks.module.scss'
-import Title from '../../utility/Title'
+import Title from '../../../utility/Title'
 
 const CollectFormThanks = () => {
 	return (

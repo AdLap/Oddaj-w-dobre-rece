@@ -1,6 +1,6 @@
-@import '../../../scss/settings/breakpoints';
-@import '../../../scss/settings/colors';
-@import '../../../scss/settings/fonts';
+@import '../../../../scss/settings/breakpoints';
+@import '../../../../scss/settings/colors';
+@import '../../../../scss/settings/fonts';
 
 .summary {
 	display: grid;
@@ -45,11 +45,11 @@
 		}
 
 		&__one {
-			background: url('../../../assets/Icon-1.svg') no-repeat center/contain;
+			background: url('../../../../assets/Icon-1.svg') no-repeat center/contain;
 		}
 
 		&__two {
-			background: url('../../../assets/Icon-4.svg') no-repeat center/contain;
+			background: url('../../../../assets/Icon-4.svg') no-repeat center/contain;
 		}
 	}
 
