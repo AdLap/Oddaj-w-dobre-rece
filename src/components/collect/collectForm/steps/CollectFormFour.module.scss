@@ -1,0 +1,80 @@
+@import '../../../../scss/settings/colors';
+@import '../../../../scss/settings/breakpoints';
+@import '../../../../scss/settings/fonts';
+
+[data-form-step-four] {
+	max-width: 936px;
+	min-height: 750px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 40px;
+	padding-bottom: 100px;
+
+	@include media-up($md) {
+		flex-direction: row;
+		justify-content: space-between;
+		min-height: unset;
+		gap: 152px;
+	}
+
+	[data-container-step-four] {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		gap: 20px;
+
+		@include media-up($sm) {
+			max-width: 392px;
+		}
+	}
+
+	[data-label-step-four] {
+		width: 100%;
+		min-height: 46px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+		position: relative;
+
+		@include media-up($sm) {
+			flex-direction: row;
+			align-items: center;
+		}
+	}
+
+	[data-input-step-four] {
+		width: 100%;
+		height: 40px;
+		border: $border-main;
+		background: transparent;
+		font-family: $font-base;
+		font-weight: 300;
+		line-height: 1.33;
+		color: $color-input-txt;
+
+		@include fluid-font(16px, 24px);
+		@include media-up($sm) {
+			max-width: 256px;
+		}
+
+		@include media-up($md) {
+			background: $color-collect-form-bg;
+		}
+	}
+
+	[data-input-step-four='textarea'] {
+		height: 120px;
+		align-self: flex-start;
+	}
+}
+
+[data-error-step-four] {
+	position: absolute;
+	bottom: -26px;
+	left: 140px;
+}

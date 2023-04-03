@@ -1,0 +1,127 @@
+@import '../../../scss/settings/colors';
+@import '../../../scss/settings/breakpoints';
+@import '../../../scss/settings/fonts';
+
+.container {
+	position: relative;
+	width: 100%;
+	padding: 35px 12px 50px;
+	background: url('../../../assets/Background-Form.jpg') no-repeat right/cover;
+
+	@include media-up($lg) {
+		padding: 35px 0 50px 142px;
+	}
+
+	.page {
+		font-weight: 300;
+		line-height: 1.125;
+		color: $color-main;
+
+		@include fluid-font(18px, 24px);
+	}
+
+	.step {
+		max-width: 495px;
+		min-height: 524px;
+		margin: 70px auto 158px;
+		font-weight: 300;
+		line-height: 1.33;
+		color: $color-input-txt;
+		background: $color-collect-form-bg-modal;
+		backdrop-filter: blur(10px);
+		padding: 12px;
+		box-shadow: 0 0 10px #808080;
+		position: relative;
+
+		@include fluid-font(18px, 24px);
+		@include media-up($md) {
+			background: transparent;
+			backdrop-filter: none;
+			box-shadow: none;
+			max-width: 957px;
+			margin: 70px 0 158px;
+		}
+	}
+}
+
+[data-collect-form-select] {
+	width: 300px;
+	height: 49px;
+	border: $border-main;
+	position: relative;
+	cursor: pointer;
+	z-index: 5;
+	line-height: 44px;
+	padding-left: 18px;
+
+	@include media-up($md) {
+		background: $color-collect-form-bg;
+	}
+
+	[data-collect-form-select-arrow] {
+		background: url('../../../assets/Icon-Arrow-Down.svg') no-repeat
+			center/contain;
+		width: 57px;
+		height: 26px;
+		position: absolute;
+		right: 0;
+		top: 11.5px;
+		transition: 0.3s ease-out;
+	}
+
+	[data-collect-form-select-arrow='active'] {
+		transform: rotateX(180deg);
+	}
+
+	[data-collect-form-select-options] {
+		display: none;
+		transition: 0.3s ease-out; // TODO sprawdzić
+	}
+
+	[data-collect-form-select-options='active'] {
+		border: $border-main;
+		min-width: 86px;
+		width: fit-content;
+		padding: 0 26px;
+		height: 185px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 2px;
+		line-height: 32px;
+		position: absolute;
+		top: 64px;
+		right: -0.75px;
+		cursor: default;
+		transition: 0.3s ease-out; // TODO sprawdzić
+		z-index: 0;
+		background: $color-collect-form-bg;
+	}
+
+	[data-collect-form-select-options-item] {
+		cursor: pointer;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+[data-collect-form-title] {
+	font-weight: 600;
+	line-height: 1.25;
+	color: $color-black;
+	margin-bottom: 40px;
+
+	@include fluid-font(26px, 36px);
+	@include media-up($md) {
+		max-width: 50%;
+	}
+}
+
+[data-collect-form-subtitle] {
+	font-weight: 600;
+	line-height: 1.33;
+	margin-bottom: 20px;
+
+	@include fluid-font(16px, 24px);
+}

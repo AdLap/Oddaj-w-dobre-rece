@@ -1,0 +1,12 @@
+@import '../../../../scss/settings/breakpoints';
+
+.success-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25%;
+
+  @include media-up($md) {
+    margin-top: 0;
+  }
+}
