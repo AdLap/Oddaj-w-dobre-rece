@@ -3,8 +3,7 @@
 @import '../../scss/settings/breakpoints';
 
 .collect {
-	width: 100%; //vw;
-	//    background: url('../../assets/Form-Hero-Image.jpg') no-repeat  top left/54%;
+	width: 100%;
 }
 
 .container {
@@ -16,22 +15,17 @@
 }
 
 .image {
-	// width: 54vw;
-	// height: 88vh;
 	position: relative;
 	overflow: hidden;
 
 	img {
 		width: 100%;
-		height: auto;
-		// position: absolute;
-		// top: 0;
-		// right: 0;
+		height: 100%;
 	}
 }
 
 .desc {
-	width: 100%; // 663px;
+	width: 100%;
 	max-width: 663px;
 	min-height: 455px;
 	display: flex;
@@ -40,16 +34,13 @@
 	flex-direction: column;
 	align-self: center;
 	margin: 0 auto;
-	// flex-wrap: wrap;
-
-	// margin-top: 257px;
+	padding-top: 2rem;
 }
 
 .title {
 	margin-top: 77.2px;
-	// font-size: 40px;
 	font-weight: 300;
-	line-height: 1.4; // 55px;
+	line-height: 1.4;
 	letter-spacing: 0;
 	color: $color-main;
 
