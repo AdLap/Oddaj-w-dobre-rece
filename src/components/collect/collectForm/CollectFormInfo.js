@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './CollectFormTitle.module.scss';
+import styles from './CollectFormInfo.module.scss';
 import CSSModules from 'react-css-modules';
 
-const CollectFormTitle = ({ text }) => {
+const CollectFormInfo = ({ text }) => {
     return (
         <div styleName='box'>
             <span styleName='title'>Ważne!</span><br />
@@ -11,4 +11,4 @@ const CollectFormTitle = ({ text }) => {
     )
 }
 
-export default CSSModules(CollectFormTitle, styles);
+export default CSSModules(CollectFormInfo, styles);

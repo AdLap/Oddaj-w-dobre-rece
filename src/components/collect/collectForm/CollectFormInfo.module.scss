@@ -1,0 +1,31 @@
+@import '../../../scss/settings/colors';
+@import '../../../scss/settings/breakpoints';
+@import '../../../scss/settings/fonts';
+
+.box {
+    width: 100%; // 100vw;
+    padding: 50px 12px;
+    background: $color-collect-accent;
+
+    @include media-up($sm) {
+        padding: 50px 142px;
+    }
+}
+
+.title {
+    // font-size: 36px;
+    font-weight: 600;
+    line-height: .9; // 32px;
+    color: $color-input-txt;
+
+    @include fluid-font(28px, 36px);
+}
+
+.desc {
+    // font-size: 22px;
+    font-weight: 400;
+    line-height: 1.4; // 30px;
+    color: $color-main;
+
+    @include fluid-font(16px, 22px);
+}

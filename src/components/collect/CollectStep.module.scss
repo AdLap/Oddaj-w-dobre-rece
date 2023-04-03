@@ -1,34 +1,35 @@
-@import "../../scss/settings/colors";
+@import '../../scss/settings/colors';
+@import '../../scss/settings/breakpoints';
 
 .box {
-    width: 134.35px;
-    height: 134.35px;
-    border: 0.75px solid $color-main;
-    transform: rotate(45deg);
-    font-weight: 300;
-    line-height: 27px;
-    letter-spacing: 0;
-    color: $color-main;
-    position: relative;
-    text-align: center;
+	width: 134.35px;
+	height: 134.35px;
+	border: 0.75px solid $color-main;
+	transform: rotate(45deg);
+	font-weight: 300;
+	line-height: 27px;
+	letter-spacing: 0;
+	color: $color-main;
+	position: relative;
+	text-align: center;
 }
 
 .nr,
 .desc {
-    display: inline-block;
-    transform: rotate(-45deg);
-    position: absolute;
+	display: inline-block;
+	transform: rotate(-45deg);
+	position: absolute;
 }
 
 .nr {
-    font-size: 32px;
-    top: 19px;
-    left: 19px;
+	font-size: 32px;
+	top: 19px;
+	left: 19px;
 }
 
 .desc {
-    font-size: 22px;
-    white-space: pre-wrap;
-    top: 45px;
-    left: 26px;
+	font-size: 22px;
+	white-space: pre-wrap;
+	top: 45px;
+	left: 26px;
 }
